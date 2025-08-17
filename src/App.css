@@ -1,0 +1,4 @@
+@import "tailwindcss";
+body {
+  cursor: url("/wooden-stick.png") 4 4, auto;
+}

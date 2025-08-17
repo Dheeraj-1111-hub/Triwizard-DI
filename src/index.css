@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+
+
+@import "tailwindcss";
+
+
+/* index.css */
+body {
+  cursor: url("/wooden-stick.png") 4 4, auto;
+}
+
