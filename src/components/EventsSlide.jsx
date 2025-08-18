@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // <-- import useNavigate
 
 const eventsData = [
   {
@@ -39,6 +40,7 @@ const eventsData = [
 const Events = () => {
   const [scrollDir, setScrollDir] = useState("down");
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate(); // <-- initialize navigate
 
   // Detect scroll direction
   useEffect(() => {
@@ -73,7 +75,14 @@ const Events = () => {
         <div className="flex flex-col items-center gap-16">
           {eventsData.map((event, index) => {
             const controls = useAnimation();
-            const offset = scrollDir === "down" ? (index % 2 === 0 ? -150 : 150) : index % 2 === 0 ? 150 : -150;
+            const offset =
+              scrollDir === "down"
+                ? index % 2 === 0
+                  ? -150
+                  : 150
+                : index % 2 === 0
+                ? 150
+                : -150;
 
             return (
               <motion.div
@@ -87,7 +96,11 @@ const Events = () => {
                   transition-transform duration-500 hover:scale-[1.04] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)]
                   max-w-4xl w-full`}
               >
-                <div className={`w-full md:w-2/5 relative overflow-hidden group ${event.reverse ? "md:order-2" : ""}`}>
+                <div
+                  className={`w-full md:w-2/5 relative overflow-hidden group ${
+                    event.reverse ? "md:order-2" : ""
+                  }`}
+                >
                   <img
                     src={event.image}
                     alt={event.alt}
@@ -114,7 +127,11 @@ const Events = () => {
                     {event.title}
                   </h3>
                   <p className="text-gray-400 mb-6 leading-relaxed">{event.description}</p>
-                  <button className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]">
+                  {/* <-- Updated button with navigation */}
+                  <button
+                    onClick={() => navigate("/events")}
+                    className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
+                  >
                     Learn More →
                   </button>
                 </div>
