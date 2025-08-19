@@ -33,7 +33,7 @@ const HeroVideo = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover bg-black"
       >
         <source src="/promo.mp4" type="video/mp4" />
         Your browser does not support the video tag.

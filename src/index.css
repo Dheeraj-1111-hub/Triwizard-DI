@@ -14,3 +14,22 @@ body {
   cursor: url("/wooden-stick.png") 4 4, auto;
 }
 
+/* Swiper pagination (dots) */
+.swiper-pagination-bullet {
+  background: rgba(16, 185, 129, 0.4) !important; /* emerald-500 light */
+}
+.swiper-pagination-bullet-active {
+  background: rgba(16, 185, 129, 1) !important; /* emerald-500 */
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+}
+
+/* Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(16, 185, 129, 0.8) !important; /* emerald-500 */
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.9);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: rgba(20, 255, 160, 1) !important; /* brighter emerald */
+}
