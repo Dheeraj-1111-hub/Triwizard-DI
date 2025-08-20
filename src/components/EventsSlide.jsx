@@ -18,7 +18,7 @@ const eventsData = [
     title: "Wizarding Webcraft",
     date: "May 15, 2023",
     description:
-      "Join us for Teams of 2 - 3 participants, Participants create a landing page and can cast “spells” (interactive code effects) on competing teams pages. Creativity and functionality will be scored. (landing page design) most anticipated sporting event of the year. All four houses will compete for the Quidditch Cup in a display of flying prowess and team strategy.",
+      "Join us for Teams of 2 - 3 participants, Participants create a landing page and can cast “spells” (interactive code effects) on competing teams pages...",
     image: "https://i.imgur.com/cZuNgGf.jpg",
     alt: "Quidditch Tournament",
   },
@@ -27,7 +27,7 @@ const eventsData = [
     title: "Python Showdown",
     date: "December 25, 2023",
     description:
-      "Single registration, Round 1 – Fast-paced Kahoot-style Python quiz on basics like variables, loops, and data types.Round 2 – Teams race to solve short Python coding challenges (algorithms, pattern printing) in 60–90 seconds. Quickest and most accurate teams advance. (Python quiz + programming) Great Hall will be transformed into a winter wonderland for this formal event during the Triwizard Tournament.",
+      "Single registration, Round 1 – Fast-paced Kahoot-style Python quiz on basics like variables, loops, and data types...",
     image: "https://i.imgur.com/jnPzJF5.jpg",
     alt: "Yule Ball",
   },
@@ -182,7 +182,7 @@ const Events = () => {
                     {event.description}
                   </p>
                   <button
-                    onClick={() => navigate("/events")}
+                    onClick={() => navigate(`/events/${event.id}`)}
                     className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
                   >
                     Learn More →
