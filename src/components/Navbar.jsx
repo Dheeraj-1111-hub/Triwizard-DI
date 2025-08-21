@@ -21,7 +21,7 @@ const Navbar = () => {
                        bg-gradient-to-r from-emerald-300 via-teal-200 to-gray-100 
                        drop-shadow-[0_0_20px_rgba(16,185,129,0.6)]"
           >
-            Hogwarts Legacy
+            TRIWIZARD
           </h1>
         </div>
 

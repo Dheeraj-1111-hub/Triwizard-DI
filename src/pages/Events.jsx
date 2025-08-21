@@ -8,7 +8,7 @@ const eventDetails = [
   {
     id: 2,
     title: "Python Showdown",
-    poster: "/poster.png",
+    poster: "/PythonShowdown.jpg",
     description:
       "Round 1 – A fast-paced Kahoot-style Python quiz covering basics like variables, loops, and data types. Round 2 – A coding sprint where participants solve Python challenges under pressure. Only the quickest and sharpest advance!",
     guidelines: [
@@ -26,7 +26,7 @@ const eventDetails = [
   {
     id: 3,
     title: "Creature Canvas",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/CreatureCanvas.jpg",
     description:
       "Unleash your creativity! Design a magical creature (new or hybrid) with detailed appearance, powers, and backstory. Use Canva/Photoshop to bring your imagination to life. Judged on creativity and originality.",
     guidelines: [
@@ -44,7 +44,7 @@ const eventDetails = [
   {
     id: 4,
     title: "Curse-Breaker",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/CurseBreakers.jpg",
     description:
       "A thrilling knowledge-based challenge testing wit, speed, and problem-solving. Break through three rounds of mind-bending questions to climb the leaderboard. Only the ultimate Curse-Breaker claims the crown!",
     guidelines: [
@@ -62,7 +62,7 @@ const eventDetails = [
   {
     id: 5,
     title: "Hunt for the Horcrux",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/Hunt.jpg",
     description:
       "A thrilling adventure where 4 participants are chained together to solve mini-games on their path to victory. Beware—one wrong step and you could lose all your Horcruxes!",
     guidelines: [
@@ -80,7 +80,7 @@ const eventDetails = [
   {
     id: 6,
     title: "Harry Potter Trivia",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/Trivia.jpg",
     description:
       "Dive into the magical world of Harry Potter with this trivia showdown! From completing iconic dialogues to guessing spells and magical objects—only true Potterheads will survive.",
     guidelines: [
@@ -98,7 +98,7 @@ const eventDetails = [
   {
     id: 7,
     title: "Secure the Castle",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/SecureTheCastle.jpg",
     description:
       "Build, defend, and conquer! Teams must design secure castles while simultaneously launching attacks on opponents. Strategy, creativity, and teamwork decide who secures the crown!",
     guidelines: [
@@ -116,7 +116,7 @@ const eventDetails = [
   {
     id: 9,
     title: "FIFA",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/Fifa.jpg",
     description:
       "Step into the virtual stadium and showcase your football skills. Compete head-to-head in knockout FIFA matches until the ultimate champion is crowned.",
     guidelines: [
@@ -134,7 +134,7 @@ const eventDetails = [
   {
     id: 10,
     title: "BGMI",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/BGMI.jpg",
     description:
       "A high-stakes BGMI tournament! Squads strategize, survive, and dominate the battleground. Only the sharpest team emerges victorious!",
     guidelines: [
@@ -152,7 +152,7 @@ const eventDetails = [
   {
     id: 12,
     title: "Whisper Challenge",
-    poster: "https://i.imgur.com/cZuNgGf.jpg",
+    poster: "/Whisper.jpg",
     description:
       "A hilarious test of communication! Teammates lip-read phrases while wearing noise-cancelling headphones, leading to chaotic and funny interpretations.",
     guidelines: [

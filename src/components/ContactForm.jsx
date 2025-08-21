@@ -13,11 +13,28 @@ const ContactUs = () => {
   return (
     <section
       id="contact-us"
-      className="relative py-28 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
+      className="relative py-32 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
     >
-      {/* Enchanted starry background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.15)_0%,transparent_70%)] animate-pulse pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
+      {/* Floating magical particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {Array.from({ length: 40 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-emerald-400 rounded-full shadow-[0_0_12px_rgba(16,185,129,0.8)]"
+            initial={{ opacity: 0, y: Math.random() * 800 }}
+            animate={{
+              opacity: [0, 1, 0],
+              y: [Math.random() * 800, -20],
+              x: [Math.random() * 1200, Math.random() * 1200],
+            }}
+            transition={{
+              duration: Math.random() * 10 + 8,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Title */}
@@ -26,122 +43,120 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-[Cinzel] mb-6 text-center tracking-[0.10em] relative text-emerald-400"
+          className="text-5xl md:text-7xl font-[Cinzel] mb-10 text-center tracking-[0.15em] 
+                     bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 
+                     bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(16,185,129,0.8)]"
         >
-          <span className="relative inline-block glitch" data-text="OWL POST">
-            OWL POST
-          </span>
+          OWL POST
         </motion.h2>
 
-        <p className="text-center text-gray-400 text-lg md:text-xl mb-20 drop-shadow-[0_0_25px_rgba(0,0,0,0.9)]">
-          Send us your enchanted parchments, summon us by Floo Network, or simply send an Owl.  
-          The Wizarding World is waiting to hear from you.
+        <p className="text-center text-gray-400 text-lg md:text-xl mb-24 max-w-3xl mx-auto leading-relaxed">
+          Send us your enchanted parchments, summon us by Floo Network, or simply
+          send an Owl. The Wizarding World is waiting to hear from you.
         </p>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left Card */}
+        {/* Main Layout */}
+        <div className="grid lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+          {/* Left Floating Card */}
           <motion.div
-            initial={{ opacity: 0, x: -120 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative bg-black/60 border border-emerald-500/40 rounded-3xl 
-                       shadow-[0_0_40px_rgba(16,185,129,0.35)] p-10 
-                       flex flex-col justify-center items-center text-center
-                       group hover:scale-[1.05] hover:shadow-[0_0_70px_rgba(16,185,129,0.9)] 
-                       transition-all overflow-hidden"
+            className="relative bg-black/60 border border-emerald-500/40 rounded-3xl p-10 
+                       shadow-[0_0_50px_rgba(16,185,129,0.4)] hover:shadow-[0_0_90px_rgba(16,185,129,0.9)] 
+                       transition-all overflow-hidden text-center group"
           >
-            {/* Magic border glow */}
-            <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 group-hover:opacity-70 transition-all pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-lg opacity-50 group-hover:opacity-80 transition-all"></div>
 
             <img
               src="https://i.imgur.com/Zs8vmlq.png"
               alt="Hogwarts Crest"
-              className="w-36 mb-8 drop-shadow-[0_0_25px_rgba(16,185,129,0.8)] pointer-events-auto"
+              className="w-36 mx-auto mb-6 drop-shadow-[0_0_25px_rgba(16,185,129,0.9)]"
             />
-            <p className="text-gray-300 mb-6 leading-relaxed pointer-events-auto">
-              Step into the Great Hall of innovation — where Muggles, Witches, and Wizards unite to
-              conjure the future.
+            <p className="text-gray-300 leading-relaxed">
+              Step into the Great Hall of innovation — where Muggles, Witches,
+              and Wizards unite to conjure the future.
             </p>
-            <div className="flex items-center justify-center gap-3 text-emerald-300 font-semibold text-lg pointer-events-auto">
-              <MapPin className="w-6 h-6" />
-              <p>SRM Institute of Science and Technology, Vadapalani</p>
+            <div className="flex justify-center mt-6 text-emerald-300 font-semibold text-lg">
+              <MapPin className="w-6 h-6 mr-2" />
+              SRM Institute of Science and Technology, Vadapalani
             </div>
           </motion.div>
 
-          {/* Right Card */}
+          {/* Central Crystal Ball Card */}
           <motion.div
-            initial={{ opacity: 0, x: 120 }}
+            initial={{ opacity: 0, scale: 0.7 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative bg-gradient-to-b from-emerald-950/70 to-black/80 rounded-full 
+                       w-[350px] h-[350px] mx-auto flex flex-col items-center justify-center 
+                       text-center border border-emerald-500/40 shadow-[0_0_80px_rgba(16,185,129,0.6)] 
+                       hover:scale-105 transition-transform overflow-hidden"
+          >
+            <h3 className="text-3xl font-[Cinzel] text-emerald-300 mb-4">WIZARDING COORDINATES</h3>
+            <p className="text-gray-300 max-w-[250px]">
+              Reach out to the Head Prefects and connect with us through the Floo
+              Network or by Owl.
+            </p>
+          </motion.div>
+
+          {/* Right Info Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative bg-black/60 border border-emerald-500/40 rounded-3xl 
-                       shadow-[0_0_40px_rgba(16,185,129,0.35)] p-10 text-center md:text-left
-                       group hover:scale-[1.05] hover:shadow-[0_0_70px_rgba(16,185,129,0.9)]
+            className="relative bg-black/60 border border-emerald-500/40 rounded-3xl p-10 
+                       shadow-[0_0_50px_rgba(16,185,129,0.4)] hover:shadow-[0_0_90px_rgba(16,185,129,0.9)] 
                        transition-all overflow-hidden"
           >
-            {/* Magic border glow */}
-            <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 group-hover:opacity-70 transition-all pointer-events-none"></div>
-
-            <h3 className="text-2xl font-[Cinzel] text-emerald-300 mb-6 drop-shadow-[0_0_15px_rgba(16,185,129,0.7)] pointer-events-auto">
-              WIZARDING COORDINATES
+            <h3 className="text-2xl font-[Cinzel] text-emerald-300 mb-6">
+              Reach Us
             </h3>
-
-            <div className="space-y-6 text-gray-300 pointer-events-auto">
+            <div className="space-y-4 text-gray-300">
               <div>
                 <p className="text-emerald-400 font-semibold">Head Prefects</p>
-                <ul className="space-y-1">
-                  <li className="flex items-center gap-2">
-                    <User className="w-5 h-5 text-emerald-400" /> Hermione Granger
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <User className="w-5 h-5 text-emerald-400" /> Harry Potter
-                  </li>
-                </ul>
+                <p className="flex items-center gap-2">
+                  <User className="w-5 h-5" /> Hermione Granger
+                </p>
+                <p className="flex items-center gap-2">
+                  <User className="w-5 h-5" /> Harry Potter
+                </p>
               </div>
-
               <div>
-                <p className="text-emerald-400 font-semibold">For Queries via Floo Network</p>
-                <ul className="space-y-1">
-                  <li className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-emerald-400" /> Ron Weasley: +91 98765 43210
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-emerald-400" /> Luna Lovegood: +91 91234 56789
-                  </li>
-                </ul>
+                <p className="text-emerald-400 font-semibold">Floo Network</p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" /> Ron Weasley: +91 98765 43210
+                </p>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-5 h-5" /> Luna Lovegood: +91 91234 56789
+                </p>
               </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5 text-emerald-400" /> hogwarts.events@srm.edu
+              </div>
+            </div>
 
-              <div>
-                <p className="text-emerald-400 font-semibold">Send Us an Owl</p>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-emerald-400" /> hogwarts.events@srm.edu
-                </div>
-              </div>
-
-              {/* Socials */}
-              <div className="mt-6">
-                <p className="text-emerald-400 font-semibold mb-2">Follow the Marauder’s Map</p>
-                <div className="flex gap-6 justify-center md:justify-start">
-                  <a
-                    href="https://www.instagram.com/diclub.srmvdp/?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:scale-110 transition-transform"
-                  >
-                    <Instagram className="w-6 h-6 text-emerald-400 hover:text-emerald-300" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/diclub-srmvdp/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:scale-110 transition-transform"
-                  >
-                    <Linkedin className="w-6 h-6 text-emerald-400 hover:text-emerald-300" />
-                  </a>
-                </div>
-              </div>
+            {/* Socials */}
+            <div className="flex gap-6 mt-6">
+              <a
+                href="https://www.instagram.com/diclub.srmvdp/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-emerald-400/10 border border-emerald-400 flex items-center justify-center hover:scale-110 hover:bg-emerald-400/20 transition-all"
+              >
+                <Instagram className="w-6 h-6 text-emerald-400" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/diclub-srmvdp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-emerald-400/10 border border-emerald-400 flex items-center justify-center hover:scale-110 hover:bg-emerald-400/20 transition-all"
+              >
+                <Linkedin className="w-6 h-6 text-emerald-400" />
+              </a>
             </div>
           </motion.div>
         </div>
@@ -152,18 +167,15 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-20 max-w-4xl mx-auto text-center bg-black/60 border border-emerald-500/40 
-                     rounded-3xl p-8 shadow-[0_0_40px_rgba(16,185,129,0.35)] 
-                     hover:shadow-[0_0_70px_rgba(16,185,129,0.8)] transition-all relative overflow-hidden"
+          className="mt-28 max-w-4xl mx-auto text-center bg-black/70 border border-emerald-500/40 
+                     rounded-3xl p-10 shadow-[0_0_60px_rgba(16,185,129,0.4)] hover:shadow-[0_0_90px_rgba(16,185,129,0.8)] 
+                     transition-all relative"
         >
-          {/* Magic border glow */}
-          <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 pointer-events-none"></div>
-
-          <h4 className="text-2xl md:text-3xl text-emerald-300 font-[Cinzel] mb-3 drop-shadow-[0_0_20px_rgba(16,185,129,0.8)] pointer-events-auto">
+          <h4 className="text-2xl md:text-3xl text-emerald-300 font-[Cinzel] mb-3">
             The Sorting Hat awaits you on{" "}
             <span className="text-emerald-400">10th & 11th September</span>
           </h4>
-          <p className="text-gray-400 text-lg pointer-events-auto">
+          <p className="text-gray-400 text-lg">
             Don’t miss the Triwizard-inspired celebration of magic & technology!
           </p>
         </motion.div>
