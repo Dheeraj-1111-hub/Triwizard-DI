@@ -7,7 +7,6 @@ import {
   Mail,
   Instagram,
   Linkedin,
-  Twitter,
 } from "lucide-react";
 
 const ContactUs = () => {
@@ -16,7 +15,7 @@ const ContactUs = () => {
       id="contact-us"
       className="relative py-28 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
     >
-      {/* Animated emerald grid background */}
+      {/* Enchanted starry background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.15)_0%,transparent_70%)] animate-pulse pointer-events-none"></div>
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
 
@@ -27,15 +26,16 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-[Cinzel] mb-6 text-center tracking-[0.25em] relative text-emerald-400"
+          className="text-4xl md:text-6xl font-[Cinzel] mb-6 text-center tracking-[0.10em] relative text-emerald-400"
         >
-          <span className="relative inline-block glitch" data-text="CONTACT US">
-            CONTACT US
+          <span className="relative inline-block glitch" data-text="OWL POST">
+            OWL POST
           </span>
         </motion.h2>
 
         <p className="text-center text-gray-400 text-lg md:text-xl mb-20 drop-shadow-[0_0_25px_rgba(0,0,0,0.9)]">
-          Reach out to us with your questions, ideas, or feedback. The future awaits your voice.
+          Send us your enchanted parchments, summon us by Floo Network, or simply send an Owl.  
+          The Wizarding World is waiting to hear from you.
         </p>
 
         {/* Cards */}
@@ -52,16 +52,17 @@ const ContactUs = () => {
                        group hover:scale-[1.05] hover:shadow-[0_0_70px_rgba(16,185,129,0.9)] 
                        transition-all overflow-hidden"
           >
-            {/* Neon border effect */}
+            {/* Magic border glow */}
             <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 group-hover:opacity-70 transition-all pointer-events-none"></div>
 
             <img
               src="https://i.imgur.com/Zs8vmlq.png"
-              alt="Event Logo"
+              alt="Hogwarts Crest"
               className="w-36 mb-8 drop-shadow-[0_0_25px_rgba(16,185,129,0.8)] pointer-events-auto"
             />
             <p className="text-gray-300 mb-6 leading-relaxed pointer-events-auto">
-              Step into the future with us — where technology, innovation, and imagination collide.
+              Step into the Great Hall of innovation — where Muggles, Witches, and Wizards unite to
+              conjure the future.
             </p>
             <div className="flex items-center justify-center gap-3 text-emerald-300 font-semibold text-lg pointer-events-auto">
               <MapPin className="w-6 h-6" />
@@ -80,48 +81,48 @@ const ContactUs = () => {
                        group hover:scale-[1.05] hover:shadow-[0_0_70px_rgba(16,185,129,0.9)]
                        transition-all overflow-hidden"
           >
-            {/* Neon border effect */}
+            {/* Magic border glow */}
             <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 group-hover:opacity-70 transition-all pointer-events-none"></div>
 
             <h3 className="text-2xl font-[Cinzel] text-emerald-300 mb-6 drop-shadow-[0_0_15px_rgba(16,185,129,0.7)] pointer-events-auto">
-              CONTACT INFORMATION
+              WIZARDING COORDINATES
             </h3>
 
             <div className="space-y-6 text-gray-300 pointer-events-auto">
               <div>
-                <p className="text-emerald-400 font-semibold">Coordinators</p>
+                <p className="text-emerald-400 font-semibold">Head Prefects</p>
                 <ul className="space-y-1">
                   <li className="flex items-center gap-2">
-                    <User className="w-5 h-5 text-emerald-400" /> Name1
+                    <User className="w-5 h-5 text-emerald-400" /> Hermione Granger
                   </li>
                   <li className="flex items-center gap-2">
-                    <User className="w-5 h-5 text-emerald-400" /> Name2
+                    <User className="w-5 h-5 text-emerald-400" /> Harry Potter
                   </li>
                 </ul>
               </div>
 
               <div>
-                <p className="text-emerald-400 font-semibold">For Queries Contact</p>
+                <p className="text-emerald-400 font-semibold">For Queries via Floo Network</p>
                 <ul className="space-y-1">
                   <li className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-emerald-400" /> Name1: +91 Number
+                    <Phone className="w-5 h-5 text-emerald-400" /> Ron Weasley: +91 98765 43210
                   </li>
                   <li className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-emerald-400" /> Name2: +91 Number
+                    <Phone className="w-5 h-5 text-emerald-400" /> Luna Lovegood: +91 91234 56789
                   </li>
                 </ul>
               </div>
 
               <div>
-                <p className="text-emerald-400 font-semibold">Mail Us</p>
+                <p className="text-emerald-400 font-semibold">Send Us an Owl</p>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-emerald-400" /> (Email)
+                  <Mail className="w-5 h-5 text-emerald-400" /> hogwarts.events@srm.edu
                 </div>
               </div>
 
               {/* Socials */}
               <div className="mt-6">
-                <p className="text-emerald-400 font-semibold mb-2">Follow Us</p>
+                <p className="text-emerald-400 font-semibold mb-2">Follow the Marauder’s Map</p>
                 <div className="flex gap-6 justify-center md:justify-start">
                   <a
                     href="https://www.instagram.com/diclub.srmvdp/?hl=en"
@@ -139,8 +140,6 @@ const ContactUs = () => {
                   >
                     <Linkedin className="w-6 h-6 text-emerald-400 hover:text-emerald-300" />
                   </a>
-                 
-                  
                 </div>
               </div>
             </div>
@@ -157,14 +156,15 @@ const ContactUs = () => {
                      rounded-3xl p-8 shadow-[0_0_40px_rgba(16,185,129,0.35)] 
                      hover:shadow-[0_0_70px_rgba(16,185,129,0.8)] transition-all relative overflow-hidden"
         >
-          {/* Glowing border */}
+          {/* Magic border glow */}
           <div className="absolute inset-0 rounded-3xl border border-emerald-400/40 blur-md opacity-40 pointer-events-none"></div>
 
           <h4 className="text-2xl md:text-3xl text-emerald-300 font-[Cinzel] mb-3 drop-shadow-[0_0_20px_rgba(16,185,129,0.8)] pointer-events-auto">
-            See y'all on <span className="text-emerald-400">10th September</span>
+            The Sorting Hat awaits you on{" "}
+            <span className="text-emerald-400">10th & 11th September</span>
           </h4>
           <p className="text-gray-400 text-lg pointer-events-auto">
-            Don’t miss out on the most futuristic tech event of the year!
+            Don’t miss the Triwizard-inspired celebration of magic & technology!
           </p>
         </motion.div>
       </div>

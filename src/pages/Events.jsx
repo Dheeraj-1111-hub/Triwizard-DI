@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+
 import Navbar from "../components/Navbar";
 
 const eventDetails = [
@@ -221,45 +222,48 @@ const EventPage = () => {
   }
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-black via-gray-950 to-black min-h-screen overflow-hidden font-sans">
+    <section className="relative py-16 sm:py-20 bg-gradient-to-b from-black via-gray-950 to-black min-h-screen overflow-hidden font-sans">
       <Navbar />
 
-      {/* Magical Floating Particles */}
+      {/* Magical Floating Orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(35)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 rounded-full bg-emerald-400"
+            className="absolute w-2 h-2 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              opacity: 0.5 + Math.random() * 0.5,
+              backgroundColor:
+                i % 3 === 0 ? "#10B981" : i % 3 === 1 ? "#3B82F6" : "#FBBF24",
+              opacity: 0.3 + Math.random() * 0.7,
+              filter: "blur(2px)",
             }}
             animate={{
-              y: ["0%", `${Math.random() * 50 - 25}%`, "0%"],
-              x: ["0%", `${Math.random() * 50 - 25}%`, "0%"],
+              y: ["0%", `${Math.random() * 60 - 30}%`, "0%"],
+              x: ["0%", `${Math.random() * 60 - 30}%`, "0%"],
             }}
             transition={{
               repeat: Infinity,
-              duration: 6 + Math.random() * 4,
+              duration: 6 + Math.random() * 5,
               ease: "easeInOut",
             }}
-          ></motion.div>
+          />
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Back Button */}
         <motion.button
           onClick={() => navigate(-1)}
           whileHover={{
-            scale: 1.15,
-            rotate: [0, -5, 5, 0],
+            scale: 1.1,
+            rotate: [0, -6, 6, 0],
             textShadow: "0 0 12px #10B981, 0 0 24px #10B981",
             boxShadow: "0 0 20px #10B981, 0 0 40px #10B981",
           }}
-          whileTap={{ scale: 0.95 }}
-          className="mb-10 flex items-center px-5 py-3 rounded-full border border-emerald-400 text-emerald-400 font-semibold hover:text-teal-300 transition-all relative overflow-hidden"
+          whileTap={{ scale: 0.92 }}
+          className="mb-8 flex items-center px-5 py-3 rounded-full border border-emerald-400 text-emerald-400 font-semibold transition-all text-base relative overflow-hidden bg-black/40 backdrop-blur-md"
         >
           <span className="mr-2 text-xl animate-pulse">←</span>
           Back
@@ -271,41 +275,41 @@ const EventPage = () => {
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col md:flex-row bg-black/70 border border-emerald-400/50 rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(16,185,129,0.7)] max-w-6xl mx-auto relative group hover:shadow-[0_0_100px_rgba(16,185,129,0.8)] transition-shadow duration-500"
+          className="flex flex-col lg:flex-row bg-black/40 backdrop-blur-xl border border-emerald-400/40 rounded-3xl overflow-hidden relative max-w-6xl mx-auto shadow-[0_0_50px_rgba(16,185,129,0.6)] hover:shadow-[0_0_120px_rgba(16,185,129,0.8)] transition-all duration-700 group"
         >
           {/* Left Content */}
-          <div className="w-full md:w-2/3 p-10 space-y-6 relative z-10">
+          <div className="w-full lg:w-2/3 p-6 sm:p-10 space-y-6 relative z-10">
             {/* Title */}
             <motion.h2
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2 }}
-              className="text-4xl md:text-5xl font-[Cinzel] bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(16,185,129,0.8)] animate-gradient-x relative"
+              className="text-4xl sm:text-5xl lg:text-6xl font-[Cinzel] bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 bg-clip-text text-transparent animate-shimmer tracking-wide"
             >
               {event.title}
-              <span className="block mt-2 h-1 w-24 bg-gradient-to-r from-emerald-400 to-teal-400 animate-pulse rounded-full"></span>
             </motion.h2>
+            <div className="h-1 w-28 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full animate-pulse"></div>
 
             {/* Guidelines */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              className="bg-emerald-500/20 p-6 rounded-xl border border-emerald-400/40 shadow-lg space-y-3"
+              className="bg-gradient-to-br from-emerald-500/10 to-emerald-700/10 p-6 rounded-2xl border border-emerald-400/30 shadow-xl backdrop-blur-sm"
             >
-              <h3 className="text-xl font-semibold text-emerald-200 mb-3 tracking-wide">
+              <h3 className="text-xl font-semibold text-emerald-200 mb-4">
                 Common Guidelines
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                {event.guidelines.map((guideline, idx) => (
+              <ul className="list-disc list-inside text-gray-300 space-y-2 text-base">
+                {event.guidelines.map((g, i) => (
                   <motion.li
-                    key={idx}
+                    key={i}
                     initial={{ opacity: 0, x: -15 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
+                    transition={{ delay: i * 0.15 }}
                     className="hover:text-emerald-300 transition transform hover:scale-105"
                   >
-                    {guideline}
+                    {g}
                   </motion.li>
                 ))}
               </ul>
@@ -316,32 +320,32 @@ const EventPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.4 }}
-              className="text-gray-300 text-lg leading-relaxed"
+              className="text-gray-300 text-lg leading-relaxed italic"
             >
               {event.description}
             </motion.p>
 
-            {/* Event Info */}
+            {/* Info Grid */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-5 text-gray-300"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-gray-300"
             >
               {[
                 { label: "Time", value: event.time },
                 { label: "Venue", value: event.venue },
-                {
-                  label: "Coordinators",
-                  value: event.coordinators.join(", "),
-                },
+                { label: "Coordinators", value: event.coordinators.join(", ") },
                 { label: "For Queries", value: event.queries },
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 20px #10B981" }}
+                  whileHover={{
+                    scale: 1.08,
+                    boxShadow: "0 0 25px #10B981",
+                  }}
                   transition={{ type: "spring", stiffness: 120 }}
-                  className="p-5 bg-black/70 rounded-xl border border-emerald-400/30 shadow-md"
+                  className="p-5 bg-black/50 rounded-xl border border-emerald-400/30 shadow-lg backdrop-blur-md"
                 >
                   <span className="font-semibold text-emerald-300">
                     {item.label}:{" "}
@@ -350,21 +354,50 @@ const EventPage = () => {
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* QR Code Registration */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="mt-10 text-center"
+            >
+              <h3 className="text-2xl font-semibold text-emerald-300 mb-4">
+                Register Now
+              </h3>
+              <div className="relative inline-block group">
+                <motion.img
+                  src={`/${event.id}.png`}
+                  alt={`Register QR for ${event.title}`}
+                  className="w-48 h-48 mx-auto rounded-2xl border-2 border-emerald-400 shadow-lg group-hover:shadow-[0_0_40px_rgba(16,185,129,0.8)] transition-all"
+                  whileHover={{ scale: 1.1, rotate: 2 }}
+                  transition={{ type: "spring", stiffness: 120 }}
+                />
+                <span className="absolute inset-0 rounded-2xl bg-emerald-400/20 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></span>
+              </div>
+              <p className="mt-4 text-gray-400 italic text-sm">
+                Scan the QR code to register via Google Form
+              </p>
+            </motion.div>
           </div>
 
           {/* Right Poster */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5 }}
-            className="w-full md:w-1/3 relative overflow-hidden group perspective"
+            className="w-full lg:w-1/3 relative overflow-hidden group"
           >
             <motion.img
               src={event.poster}
               alt={event.title}
-              whileHover={{ rotateY: 10, rotateX: -8, scale: 1.08 }}
-              transition={{ type: "spring", stiffness: 100, damping: 12 }}
-              className="w-full h-full object-cover rounded-r-3xl shadow-[0_0_50px_rgba(16,185,129,0.8)]"
+              whileHover={{
+                rotateY: 12,
+                rotateX: -10,
+                scale: 1.08,
+              }}
+              transition={{ type: "spring", stiffness: 120, damping: 10 }}
+              className="w-full h-72 sm:h-96 lg:h-full object-cover rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl shadow-[0_0_50px_rgba(16,185,129,0.7)]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           </motion.div>
@@ -373,11 +406,11 @@ const EventPage = () => {
 
       <style>
         {`
-          .animate-gradient-x {
-            background-size: 200% 200%;
-            animation: gradient-x 3s ease infinite;
+          .animate-shimmer {
+            background-size: 250% 250%;
+            animation: shimmer 4s linear infinite;
           }
-          @keyframes gradient-x {
+          @keyframes shimmer {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
