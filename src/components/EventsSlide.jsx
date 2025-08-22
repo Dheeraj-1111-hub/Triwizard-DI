@@ -19,7 +19,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
-    image: "public/TRI WIZARD EVENT POSTERS/TECH.jpg",
+    image: "/TRIWIZARD/TECH.jpg",
     alt: "Python Showdown",
   },
   {
@@ -28,7 +28,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
-    image: "public/TRI WIZARD EVENT POSTERS/TECH (2).jpg",
+    image: "/TRIWIZARD/Canvas.jpg",
     alt: "Creature Canvas",
   },
   {
@@ -37,7 +37,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "A fast-paced coding face-off where teams of 2 race to spot , identify and fix intentional errors in code snippets across multiple languages",
-    image: "public/TRI WIZARD EVENT POSTERS/Tech events (1).jpg",
+    image: "/TRIWIZARD/Curse.jpg",
     alt: "Curse Breakers",
   },
   {
@@ -46,7 +46,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win",
-    image: "public/TRI WIZARD EVENT POSTERS/NON TECH (3).jpg",
+    image: "/TRIWIZARD/Hunt.jpg",
     alt: "Hunt for Horcrux",
   },
   {
@@ -55,7 +55,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "A fast-paced Kahoot-style trivia challenge on all things Harry Potter—finish the quotes, guess what comes next, and prove your wizarding wisdom!",
-    image: "public/TRI WIZARD EVENT POSTERS/NON TECH (2).jpg",
+    image: "/TRIWIZARD/Trivia.jpg",
     alt: "Harry Potter Trivia",
   },
   {
@@ -64,7 +64,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Three teams battle it out by building, defending, and attacking castles—strategy meets speed, and the team with the most cups standing claims victory.",
-    image: "public/TRI WIZARD EVENT POSTERS/NON TECH.jpg",
+    image: "/TRIWIZARD/Secure.jpg",
     alt: "Secure the castle",
   },
   {
@@ -73,7 +73,7 @@ const eventsData = [
     date: "September 11, 2025",
     description:
       " Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
-    image: "public/TRI WIZARD EVENT POSTERS/2.jpg",
+    image: "/TRIWIZARD/2.jpg",
     alt: "FIFA",
   },
   {
@@ -82,7 +82,7 @@ const eventsData = [
     date: "September 11, 2025",
     description:
       "Join our BGMI Tournament for a professional, high-intensity competition showcasing strategic gameplay and fair sportsmanship.",
-    image: "public/TRI WIZARD EVENT POSTERS/3.jpg",
+    image: "/TRIWIZARD/3.jpg",
     alt: "BGMI",
   },
   {
@@ -91,7 +91,7 @@ const eventsData = [
     date: "September 11, 2025",
     description:
       "Get ready for laughs and lip-reading in the Whisper Challenge! Test your team's communication skills in this hilarious game of misheard phrases",
-    image: "public/TRI WIZARD EVENT POSTERS/1.jpg",
+    image: "/TRIWIZARD/1.jpg",
     alt: "Whisper Challenge",
   },
 ];
