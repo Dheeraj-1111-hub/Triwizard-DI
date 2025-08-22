@@ -22,7 +22,6 @@ const Navbar = () => {
       );
     }
 
-    // Smooth scroll only if we're already on the home page
     return location.pathname === "/" ? (
       <ScrollLink
         to={item.path}
@@ -60,12 +59,16 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black">
-      <div className="w-full px-6 py-4 flex justify-between items-center bg-transparent border-b border-emerald-500/30">
-        {/* Logo */}
-        <h1 className="text-3xl md:text-4xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-gray-100 drop-shadow-[0_0_20px_rgba(16,185,129,0.6)]">
-          TRIWIZARD
-        </h1>
+    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black h-[80px]">
+      <div className="w-full px-6 h-full flex justify-between items-center bg-transparent border-b border-emerald-500/30">
+        {/* Logo - perfectly fits navbar */}
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Triwizard Logo"
+            className="h-[180px] w-[200px] object-contain p-0"
+          />
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-10">
@@ -91,7 +94,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-transparent backdrop-blur-lg border-b border-emerald-500/30 shadow-lg">
+        <div className="md:hidden bg-black/80 backdrop-blur-lg border-b border-emerald-500/30 shadow-lg">
           <div className="flex flex-col space-y-4 p-6">
             {navItems.map((item) => (
               <div key={item.name} onClick={() => setIsOpen(false)}>
