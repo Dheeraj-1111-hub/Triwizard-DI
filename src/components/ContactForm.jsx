@@ -128,7 +128,7 @@ const ContactUs = () => {
           >
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-6">
               <img src="/srmlogo.png" alt="SRM Logo" className="w-20 sm:w-28" />
-              <img src="/dilogo.jpeg" alt="DI Logo" className="w-20 sm:w-28" />
+              <img src="/dilogo.jpeg" alt="DI Logo" className="w-20 sm:w-28 h-30" />
             </div>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               Step into the Great Hall of innovation — where Muggles, Witches,
