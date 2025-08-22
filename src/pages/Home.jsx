@@ -25,9 +25,19 @@ const Home = () => {
 
       {/* Hero Section */}
       <HeroVideo />
-      <Events />
-      <ContactUs />
+
+      {/* Events Section */}
+      <div id="events">
+        <Events />
+      </div>
+
+      {/* Contact Us Section */}
+      <div id="contact-us">
+        <ContactUs />
+      </div>
+
       <Footer />
+
       {/* Wand Cursor */}
       <img
         src="/cursor.png"

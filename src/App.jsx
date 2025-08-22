@@ -1,22 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Events from "./components/EventsSlide"; // Main events component
 import EventPage from "./pages/Events"; // Detailed page for a single event
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Home Page */}
+        {/* Home Page (with Events + ContactUs inside) */}
         <Route path="/" element={<Home />} />
 
-        {/* Events List */}
-        <Route path="/events" element={<Events />} />
-
-        {/* Single Event Detail */}
+        {/* Single Event Detail Page */}
         <Route path="/events/:id" element={<EventPage />} />
 
-        {/* Optional: 404 Fallback */}
+        {/* 404 Page */}
         <Route
           path="*"
           element={

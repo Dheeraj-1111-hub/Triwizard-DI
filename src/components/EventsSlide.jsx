@@ -16,83 +16,83 @@ const eventsData = [
   {
     id: 2,
     title: "Python Showdown",
-    date: "December 25, 2023",
+    date: "September 10, 2025",
     description:
-      "Single registration, Round 1 – Fast-paced Kahoot-style Python quiz on basics like variables, loops, and data types...",
-    image: "/PythonShowdown.jpg",
-    alt: "Yule Ball",
+      "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
+    image: "public/TRI WIZARD EVENT POSTERS/TECH.jpg",
+    alt: "Python Showdown",
   },
   {
     id: 3,
     title: "Creature Canvas",
-    date: "October 31, 2023",
+    date: "September 10, 2025",
     description:
-      "single registration, participants will redesign a magical creature orcombine two or more existing creatures from the Harry Potter universe or create an new imaginary one. The design should show the creature’s appearance, habitat, magical powers and a 2-3 line caption on name, magical powers used and purpose. Judged based on creativity, detail (Canva/ Photoshop digital artAn exclusive workshop with Professor Slughorn. Learn the art of brewing complex potions including Felix Felicis. Limited spots available for 6th and 7th year students.",
-    image: "/CreatureCanvas.jpg",
-    alt: "Potions Class",
+      "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
+    image: "public/TRI WIZARD EVENT POSTERS/TECH (2).jpg",
+    alt: "Creature Canvas",
   },
   {
     id: 4,
-    title: "Curse-Breaker",
-    date: "October 31, 2023",
+    title: "Curse-Breakers",
+    date: "September 10, 2025",
     description:
-      "Curse-Breakers is an exciting knowledge-based challenge designed to test your wit, speed, and problem-solving skills! The event consists of 3 thrilling rounds, each packed with mind-bending questions that will push you to break the “curse” of confusion. Participants must tackle as many questions as possible to climb the leaderboard. The one who conquers the most questions and scores the highest will be crowned the ultimate Curse-Breaker and walk away with exciting rewards!",
-    image: "/CurseBreakers.jpg",
-    alt: "Potions Class",
+      "A fast-paced coding face-off where teams of 2 race to spot , identify and fix intentional errors in code snippets across multiple languages",
+    image: "public/TRI WIZARD EVENT POSTERS/Tech events (1).jpg",
+    alt: "Curse Breakers",
   },
   {
     id: 5,
     title: "Hunt for Horcrux",
-    date: "October 31, 2023",
+    date: "September 10, 2025",
     description:
-      " 4 per team, 4 participants will be chained together and need to solve minigames which land on their path to finish lines while being cautious as well of the other competing team. If the gamemaster announces petricus totalus on any team or person , he/she should be freezed and if not , will be forced to the starting line and lose all the horcrux. Collection of 7/4 and finishing the race in shortest time marks the winner (Relay quest)",
-    image: "/Hunt.jpg",
-    alt: "Potions Class",
+      "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win",
+    image: "public/TRI WIZARD EVENT POSTERS/NON TECH (3).jpg",
+    alt: "Hunt for Horcrux",
   },
   {
     id: 6,
     title: "Harry Potter Trivia",
-    date: "October 31, 2023",
+    date: "September 10, 2025",
     description:
-      "single registration, General kahoot/menti quiz on trivia from the world of harry potter like completing the dialogues , what comes next etc (quiz)",
-    image: "/Trivia.jpg",
-    alt: "Potions Class",
+      "A fast-paced Kahoot-style trivia challenge on all things Harry Potter—finish the quotes, guess what comes next, and prove your wizarding wisdom!",
+    image: "public/TRI WIZARD EVENT POSTERS/NON TECH (2).jpg",
+    alt: "Harry Potter Trivia",
   },
   {
     id: 7,
     title: "Secure the castle",
-    date: "October 31, 2023",
+    date: "September 10, 2025",
     description:
-      " 3-4 per team, Participants need to strategize and securely build their castles while the other defends and attacks the other team's castle. Three teams battle it out proactively till the round lasts and the winner is decided based on the number of cups standing. (attacking/ defending + castle building)",
-    image: "/SecureTheCastle.jpg",
-    alt: "Potions Class",
+      "Three teams battle it out by building, defending, and attacking castles—strategy meets speed, and the team with the most cups standing claims victory.",
+    image: "public/TRI WIZARD EVENT POSTERS/NON TECH.jpg",
+    alt: "Secure the castle",
   },
   {
     id: 9,
     title: "FIFA",
-    date: "October 31, 2023",
+    date: "September 11, 2025",
     description:
-      " 2 per team, A competitive gaming event where players face off in knockout rounds of FIFA to crown the ultimate virtual football champion. (FIFA gaming tournament)",
-    image: "/Fifa.jpg",
-    alt: "Potions Class",
+      " Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
+    image: "public/TRI WIZARD EVENT POSTERS/2.jpg",
+    alt: "FIFA",
   },
   {
     id: 10,
     title: "BGMI",
-    date: "October 31, 2023",
+    date: "September 11, 2025",
     description:
-      "4 per team, A high-intensity esports event where squads battle it out in BGMI, testing teamwork, strategy, and survival skills to emerge as champions. (BGMI esports tournament)",
-    image: "/BGMI.jpg",
-    alt: "Potions Class",
+      "Join our BGMI Tournament for a professional, high-intensity competition showcasing strategic gameplay and fair sportsmanship.",
+    image: "public/TRI WIZARD EVENT POSTERS/3.jpg",
+    alt: "BGMI",
   },
   {
     id: 12,
     title: "Whisper Challenge",
-    date: "October 31, 2023",
+    date: "September 11, 2025",
     description:
-      "A fun-filled communication game where teammates try to guess phrases through lip-reading, leading to hilarious misinterpretations",
-    image: "/Whisper.jpg",
-    alt: "Potions Class",
+      "Get ready for laughs and lip-reading in the Whisper Challenge! Test your team's communication skills in this hilarious game of misheard phrases",
+    image: "public/TRI WIZARD EVENT POSTERS/1.jpg",
+    alt: "Whisper Challenge",
   },
 ];
 
@@ -100,7 +100,10 @@ const Events = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="events" className="relative py-20 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden">
+    <section
+      id="events"
+      className="relative py-20 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
+    >
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center text-emerald-400 tracking-widest relative drop-shadow-[0_0_40px_rgba(16,185,129,0.9)]">
           Magical Events
@@ -117,7 +120,7 @@ const Events = () => {
           loop={true}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           effect="coverflow"
           coverflowEffect={{
             rotate: 30,
@@ -134,24 +137,30 @@ const Events = () => {
         >
           {eventsData.map((event) => (
             <SwiperSlide key={event.id}>
-              <div className="bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500">
-                <div className="relative w-full h-56 md:h-72 overflow-hidden">
+              <div className="group bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500 max-w-[350px] mx-auto">
+                {/* Poster */}
+                <div className="relative w-full h-[450px] md:h-[520px] overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.alt}
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+                  {/* Date & Title at Bottom */}
+                  <div className="absolute bottom-4 left-0 w-full text-center px-3">
+                    <div className="bg-emerald-500/20 inline-block px-3 py-1 rounded-full text-emerald-300 text-sm shadow-sm mb-2">
+                      {event.date}
+                    </div>
+                    <h3 className="text-2xl font-[Cinzel] text-emerald-300 drop-shadow-[0_0_20px_rgba(16,185,129,0.8)]">
+                      {event.title}
+                    </h3>
+                  </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="bg-emerald-500/20 inline-block px-3 py-1 rounded-full text-emerald-300 text-sm mb-3 shadow-sm">
-                    {event.date}
-                  </div>
-                  <h3 className="text-2xl font-[Cinzel] mb-3 text-emerald-300 drop-shadow-[0_0_20px_rgba(16,185,129,0.8)]">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-400 mb-5 leading-relaxed line-clamp-3">
+                {/* Content on Hover */}
+                <div className="p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bottom-0 left-0 w-full bg-black/80">
+                  <p className="text-gray-400 mb-5 leading-relaxed">
                     {event.description}
                   </p>
                   <button

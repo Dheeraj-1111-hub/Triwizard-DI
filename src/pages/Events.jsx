@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Navbar from "../components/Navbar";
+import { g } from "framer-motion/client";
 
 const eventDetails = [
   {
@@ -10,7 +11,7 @@ const eventDetails = [
     title: "Python Showdown",
     poster: "/PythonShowdown.jpg",
     description:
-      "Round 1 – A fast-paced Kahoot-style Python quiz covering basics like variables, loops, and data types. Round 2 – A coding sprint where participants solve Python challenges under pressure. Only the quickest and sharpest advance!",
+      "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Follow instructions carefully.",
@@ -18,17 +19,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Sura reddy - 8332831328", "Kamalesh - 9444411410"],
     queries: "Need to be added",
     participants: "1 per registration",
-    price: "₹80",
+    participationFee: "₹80",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdNeo1V0QMknTxFzaUwNlmB8GhfgqADKUzDwEoWpxJbkow1DA/viewform?usp=header",
   },
   {
     id: 3,
     title: "Creature Canvas",
     poster: "/CreatureCanvas.jpg",
     description:
-      "Unleash your creativity! Design a magical creature (new or hybrid) with detailed appearance, powers, and backstory. Use Canva/Photoshop to bring your imagination to life. Judged on creativity and originality.",
+      "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Original work only.",
@@ -36,17 +39,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: [" Nilesh - 9043795180 ", " Kaushik - 9444265342 "],
     queries: "Need to be added",
     participants: "1 per registration",
-    price: "₹80",
+    participationFee: "₹80",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSf0A98h0gGBT2uWehPByl0zG1GoJVfr5_rvkNTe0mhOvJ6o7Q/viewform?usp=header",
   },
   {
     id: 4,
     title: "Curse-Breaker",
     poster: "/CurseBreakers.jpg",
     description:
-      "A thrilling knowledge-based challenge testing wit, speed, and problem-solving. Break through three rounds of mind-bending questions to climb the leaderboard. Only the ultimate Curse-Breaker claims the crown!",
+      "A fast-paced coding face-off where teams of 2 race to spot, identify and fix intentional errors in code snippets across multiple languages.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Respect the time limits strictly.",
@@ -54,17 +59,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Yogeshwar - 8072591978", "Sreya - 7299168515"],
     queries: "Need to be added",
     participants: "2 per team",
-    price: "₹150",
+    participationFee: "₹150",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfPKNe2z6ddvIfsfEGsVGBqniTyAoXqNmLxoV7yWPR4ek9yeQ/viewform?usp=header",
   },
   {
     id: 5,
     title: "Hunt for the Horcrux",
     poster: "/Hunt.jpg",
     description:
-      "A thrilling adventure where 4 participants are chained together to solve mini-games on their path to victory. Beware—one wrong step and you could lose all your Horcruxes!",
+      "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Follow gamemaster's instructions strictly.",
@@ -72,17 +79,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Pranav - 8331018490", "Preetham - 8778803738"],
     queries: "Need to be added",
     participants: "4 per team",
-    price: "₹240",
+    participationFee: "₹240",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLScu5F8MBbE30-pw8Azwo_aJLqfYPnBFT2ZMwuYAh6hjuqXa-w/viewform?usp=header",
   },
   {
     id: 6,
     title: "Harry Potter Trivia",
     poster: "/Trivia.jpg",
     description:
-      "Dive into the magical world of Harry Potter with this trivia showdown! From completing iconic dialogues to guessing spells and magical objects—only true Potterheads will survive.",
+      "A fast-paced Kahoot-style trivia challenge on all things Harry Potter—finish the quotes, guess what comes next, and prove your wizarding wisdom!",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "No external devices allowed.",
@@ -90,17 +99,22 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: [
+      " Rohit Vikrant - 9080345650 ",
+      " Sandhya - 9500698899",
+    ],
     queries: "Need to be added",
     participants: "1 per registration",
-    price: "₹60",
+    participationFee: "₹60",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSekV7zRYx21SYzmBhsdIcX1UKWWATkNwNGQ9rU4qUrmP_uiyg/viewform?usp=header",
   },
   {
     id: 7,
     title: "Secure the Castle",
     poster: "/SecureTheCastle.jpg",
     description:
-      "Build, defend, and conquer! Teams must design secure castles while simultaneously launching attacks on opponents. Strategy, creativity, and teamwork decide who secures the crown!",
+      "Three teams battle it out by building, defending, and attacking castles—strategy meets speed, and the team with the most cups standing claims victory.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Team spirit is a must.",
@@ -108,17 +122,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Sadhana - 7904691834", "Ruthiksha - 9019377925"],
     queries: "Need to be added",
     participants: "3 per team",
-    price: "₹180",
+    participationFee: "₹180",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLScTkxUpK8EQgfyk-il4aSWouF2l3IYg9u8RWw8RsQUpQgaTzQ/viewform?usp=header",
   },
   {
     id: 9,
     title: "FIFA",
     poster: "/Fifa.jpg",
     description:
-      "Step into the virtual stadium and showcase your football skills. Compete head-to-head in knockout FIFA matches until the ultimate champion is crowned.",
+      "Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Own controllers allowed (optional).",
@@ -126,17 +142,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
-    queries: "Need to be added",
+    studentcoordinators: ["Mark Owen - 9499006899", "Deepak - 7200386036"],
+    queries: "Mark Owen - 9499006899 ; Deepak - 7200386036",
     participants: "2 per team",
-    price: "₹100",
+    participationFee: "₹100",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdfBhWw9UbyqEF_2H9RppxKOO-W5mI3s0-p6QdR5HXf3ckr2Q/viewform?usp=header",
   },
   {
     id: 10,
     title: "BGMI",
     poster: "/BGMI.jpg",
     description:
-      "A high-stakes BGMI tournament! Squads strategize, survive, and dominate the battleground. Only the sharpest team emerges victorious!",
+      "Join our BGMI Tournament for a professional, high-intensity competition showcasing strategic gameplay and fair sportsmanship.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Play on your own devices.",
@@ -144,17 +162,19 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Tejas - 9994077703", "Sauban - 9631981621"],
     queries: "Need to be added",
     participants: "2 or 4 per team",
-    price: "₹100 (2 players) / ₹200 (4 players)",
+    participationFee: "₹100 (2 players) / ₹200 (4 players)",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLSezymkEhtsvW-OFLun6dHHqbwRrAiPcVrhR17nmn4NBfe4ypg/viewform?usp=header",
   },
   {
     id: 12,
     title: "Whisper Challenge",
     poster: "/Whisper.jpg",
     description:
-      "A hilarious test of communication! Teammates lip-read phrases while wearing noise-cancelling headphones, leading to chaotic and funny interpretations.",
+      "Get ready for laughs and lip-reading in the Whisper Challenge! Test your team's communication skills in this hilarious game of misheard phrases.",
     guidelines: [
       "Arrive at least 30 minutes before the event.",
       "Respect time limits.",
@@ -162,10 +182,12 @@ const eventDetails = [
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
-    coordinators: ["Need to be added"],
+    studentcoordinators: ["Shanmathi - 6379479176", "Nithila - 8122992345"],
     queries: "Need to be added",
     participants: "3 per team",
-    price: "₹150",
+    participationFee: "₹150",
+    formLink:
+      "https://docs.google.com/forms/d/e/1FAIpQLScPuwo6wrt2Qz0qQGol4ofv4R6geDCPD4F8tdSLux1W1B_5RA/viewform?usp=header",
   },
 ];
 
@@ -210,8 +232,6 @@ const EventPage = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 lg:px-10 py-12 mt-10">
-        
-
         {/* Event Layout */}
         <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-[0_0_80px_rgba(16,185,129,0.7)] border border-emerald-400/40 backdrop-blur-2xl">
           {/* Poster Section */}
@@ -253,7 +273,7 @@ const EventPage = () => {
               className="p-5 bg-gradient-to-br from-emerald-500/10 to-emerald-700/20 rounded-2xl border border-emerald-400/30 shadow-lg"
             >
               <h3 className="text-xl font-semibold text-emerald-300 mb-3">
-                Guidelines
+                GUIDELINES
               </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 {event.guidelines.map((g, i) => (
@@ -264,65 +284,84 @@ const EventPage = () => {
 
             {/* Info Grid */}
             {/* Info Grid */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300">
-  {/* Time */}
-  <motion.div
-    whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-    className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
-  >
-    <span className="font-semibold text-emerald-300">Time:</span>{" "}
-    {event.time}
-  </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300">
+              {/* Time */}
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
+                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
+              >
+                <span className="font-semibold text-emerald-300">Time:</span>{" "}
+                {event.time}
+              </motion.div>
 
-  {/* Venue + Price in same box */}
-  <motion.div
-    whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-    className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
-  >
-    <span className="font-semibold text-emerald-300">Venue:</span>{" "}
-    {event.venue}
-    <br />
-    <span className="font-semibold text-emerald-300">Price:</span>{" "}
-    {event.price}
-  </motion.div>
+              {/* Venue + Price in same box */}
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
+                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
+              >
+                <span className="font-semibold text-emerald-300">Venue:</span>{" "}
+                {event.venue}
+                <br />
+                <span className="font-semibold text-emerald-300">
+                  Participation Fee:
+                </span>{" "}
+                {event.participationFee}
+              </motion.div>
 
-  {/* Participants */}
-  <motion.div
-    whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-    className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
-  >
-    <span className="font-semibold text-emerald-300">Participants:</span>{" "}
-    {event.participants}
-  </motion.div>
+              {/* Participants */}
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
+                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
+              >
+                <span className="font-semibold text-emerald-300 mb-2">
+                  Participants:
+                </span>
+                <span className="text-center">{event.participants}</span>
+              </motion.div>
 
-  {/* Coordinators */}
-  <motion.div
-    whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-    className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
-  >
-    <span className="font-semibold text-emerald-300">Coordinators:</span>{" "}
-    {event.coordinators.join(", ")}
-  </motion.div>
-</div>
-
+              {/* Coordinators */}
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
+                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
+              >
+                <span className="font-semibold text-emerald-300 mb-2">
+                  Student Coordinators:
+                </span>
+                <div className="flex flex-col gap-1 text-center">
+                  {event.studentcoordinators.map((coordinator, index) => (
+                    <span key={index}>{coordinator}</span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
 
             {/* QR + CTA */}
-            <div className="mt-10 text-center">
-              <h3 className="text-2xl font-semibold text-emerald-300 mb-4">
-                Register Now
-              </h3>
-              <motion.img
-  src={`/${event.id}.png`}
-  alt={`Register QR for ${event.title}`}
-  className="w-44 h-44 mx-auto rounded-2xl border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.8)]"
-  whileHover={{ scale: 1.08 }}   // Just zoom in a bit
-  transition={{ type: "spring", stiffness: 150 }}
-/>
 
-              
-              <p className="mt-3 text-gray-400 text-sm italic">
-                Scan the QR code to register by Google Form
-              </p>
+            <div>
+              <div className="mt-10 text-center">
+                <h3 className="text-2xl font-semibold text-emerald-300 mb-6"></h3>
+
+                <div className="flex justify-center mt-4">
+                  <motion.button
+                    onClick={() => {
+                      if (event.formLink) {
+                        window.open(event.formLink, "_blank");
+                      } else {
+                        alert("Google Form link will be updated soon!");
+                      }
+                    }}
+                    className="px-6 py-3 bg-transparent text-emerald-400 font-harry text-lg rounded-xl border border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.6)] transition-all duration-300 hover:text-emerald-300 hover:shadow-[0_0_35px_rgba(16,185,129,1)] hover:scale-105"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 200 }}
+                  >
+                    Register Now
+                  </motion.button>
+                </div>
+
+                <p className="mt-4 text-gray-400 text-sm italic">
+                  Click to open the Google Form in a new tab
+                </p>
+              </div>
             </div>
           </div>
         </div>
