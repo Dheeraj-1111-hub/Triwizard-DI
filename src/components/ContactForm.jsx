@@ -208,14 +208,14 @@ const ContactUs = () => {
                   7305871144
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Jai Aakash: +91 6382336183
+                  <Phone className="w-5 h-5" /> Dev Mehta: +91 9080111855
                 </p>
               </div>
               <div
                 className="flex items-center gap-2 cursor-pointer hover:text-emerald-400"
                 onClick={handleCopyEmail}
               >
-                <Mail className="w-5 h-5" /> ma0420@srm.edu{" "}
+                <Mail className="w-5 h-5" /> sk5346@srmist.edu.in{" "}
                 <Copy className="w-4 h-4" />
               </div>
             </div>
