@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -98,6 +98,17 @@ const eventsData = [
 
 const Events = () => {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // treat <768px as mobile
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <section
@@ -137,7 +148,10 @@ const Events = () => {
         >
           {eventsData.map((event) => (
             <SwiperSlide key={event.id}>
-              <div className="group bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500 max-w-[350px] mx-auto">
+              <div
+                className={`group bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500 max-w-[350px] mx-auto relative`}
+                onClick={() => isMobile && navigate(`/events/${event.id}`)} // Open directly on mobile
+              >
                 {/* Poster */}
                 <div className="relative w-full h-[450px] md:h-[520px] overflow-hidden">
                   <img
@@ -158,18 +172,20 @@ const Events = () => {
                   </div>
                 </div>
 
-                {/* Content on Hover */}
-                <div className="p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bottom-0 left-0 w-full bg-black/80">
-                  <p className="text-gray-400 mb-5 leading-relaxed">
-                    {event.description}
-                  </p>
-                  <button
-                    onClick={() => navigate(`/events/${event.id}`)}
-                    className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
-                  >
-                    Learn More →
-                  </button>
-                </div>
+                {/* Content on Hover - hidden on mobile */}
+                {!isMobile && (
+                  <div className="p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bottom-0 left-0 w-full bg-black/80">
+                    <p className="text-gray-400 mb-5 leading-relaxed">
+                      {event.description}
+                    </p>
+                    <button
+                      onClick={() => navigate(`/events/${event.id}`)}
+                      className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
+                    >
+                      Learn More →
+                    </button>
+                  </div>
+                )}
               </div>
             </SwiperSlide>
           ))}
