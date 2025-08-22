@@ -10,20 +10,46 @@ import {
   Copy,
 } from "lucide-react";
 
-// Countdown Hook
+// --- Countdown Hook ---
 const useCountdown = (targetDate) => {
-  const [timeLeft, setTimeLeft] = useState("");
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+    ended: false,
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const difference = +new Date(targetDate) - +new Date();
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / (1000 * 60)) % 60);
-        setTimeLeft(`${days}d ${hours}h ${minutes}m`);
+      const now = new Date().getTime();
+      const distance = new Date(targetDate).getTime() - now;
+
+      if (distance > 0) {
+        const days = String(
+          Math.floor(distance / (1000 * 60 * 60 * 24))
+        ).padStart(2, "0");
+        const hours = String(
+          Math.floor((distance / (1000 * 60 * 60)) % 24)
+        ).padStart(2, "0");
+        const minutes = String(
+          Math.floor((distance / (1000 * 60)) % 60)
+        ).padStart(2, "0");
+        const seconds = String(Math.floor((distance / 1000) % 60)).padStart(
+          2,
+          "0"
+        );
+
+        setTimeLeft({ days, hours, minutes, seconds, ended: false });
       } else {
-        setTimeLeft("Event Started!");
+        setTimeLeft({
+          days: "00",
+          hours: "00",
+          minutes: "00",
+          seconds: "00",
+          ended: true,
+        });
+        clearInterval(timer);
       }
     }, 1000);
 
@@ -80,7 +106,9 @@ const ContactUs = () => {
                      bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 
                      bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(16,185,129,0.8)]"
         >
-          CONTACT US
+          <h2 className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center text-emerald-400 tracking-widest relative drop-shadow-[0_0_40px_rgba(16,185,129,0.9)]">
+            Contact Us
+          </h2>
         </motion.h2>
 
         <p className="text-center text-gray-400 text-lg md:text-xl mb-24 max-w-3xl mx-auto leading-relaxed">
@@ -212,18 +240,47 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-28 max-w-4xl mx-auto text-center bg-black/70 border border-emerald-500/40 
-                     rounded-3xl p-10 shadow-[0_0_60px_rgba(16,185,129,0.4)] hover:shadow-[0_0_90px_rgba(16,185,129,0.8)] 
-                     transition-all relative"
+          className="mt-20 sm:mt-28 max-w-4xl mx-auto text-center bg-black/70 border border-emerald-500/40 
+             rounded-2xl sm:rounded-3xl p-6 sm:p-10 shadow-[0_0_40px_rgba(16,185,129,0.4)] 
+             hover:shadow-[0_0_70px_rgba(16,185,129,0.8)] transition-all relative"
         >
-          <h4 className="text-2xl md:text-3xl text-emerald-300 font-[Cinzel] mb-3">
+          <h4 className="text-xl sm:text-2xl md:text-3xl text-emerald-300 font-[Cinzel] mb-3 leading-snug">
             The Sorting Hat awaits you on{" "}
             <span className="text-emerald-400">10th & 11th September</span>
           </h4>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base sm:text-lg max-w-lg mx-auto">
             Don’t miss the Triwizard-inspired celebration of magic & technology!
           </p>
-          <p className="mt-4 text-xl text-emerald-400">{timeLeft}</p>
+
+          {/* Countdown Display */}
+          {timeLeft.ended ? (
+            <p className="mt-6 text-lg sm:text-2xl font-bold text-red-400 animate-pulse">
+              🎉 Event Started! 🎉
+            </p>
+          ) : (
+            <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 text-emerald-300 font-mono">
+              {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
+                <motion.div
+                  key={unit}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.2 }}
+                  className="flex flex-col items-center"
+                >
+                  <div
+                    className="bg-black/80 border border-emerald-500/50 rounded-lg sm:rounded-xl 
+                       px-4 py-3 sm:px-6 sm:py-4 shadow-[0_0_15px_rgba(16,185,129,0.6)] 
+                       text-2xl sm:text-4xl font-bold min-w-[65px] sm:min-w-[90px] text-center"
+                  >
+                    {timeLeft[unit]}
+                  </div>
+                  <span className="mt-2 uppercase text-xs sm:text-sm tracking-wide text-gray-400">
+                    {unit}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
