@@ -127,8 +127,18 @@ const ContactUs = () => {
                        transition-all overflow-hidden text-center group"
           >
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-6">
-              <img src="/srmlogo.png" alt="SRM Logo" className="w-20 sm:w-28" />
-              <img src="/dilogo.jpeg" alt="DI Logo" className="w-20 sm:w-28 h-30" />
+              <motion.img
+                src="/srmlogo.png"
+                alt="SRM Logo"
+                whileHover={{ scale: 1.1, rotate: 3 }}
+                className="w-20 sm:w-28 rounded-xl border border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all"
+              />
+              <motion.img
+                src="/dilogo.jpeg"
+                alt="DI Logo"
+                whileHover={{ scale: 1.1, rotate: -3 }}
+                className="w-20 sm:w-28 h-30 rounded-full border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all"
+              />
             </div>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               Step into the Great Hall of innovation — where Muggles, Witches,
