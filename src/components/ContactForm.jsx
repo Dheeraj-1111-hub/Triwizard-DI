@@ -63,7 +63,7 @@ const ContactUs = () => {
   const timeLeft = useCountdown("2025-09-10T00:00:00");
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("hogwarts.events@srm.edu");
+    navigator.clipboard.writeText("@srm.edu");
     alert("Email copied to clipboard!");
   };
 
@@ -195,26 +195,27 @@ const ContactUs = () => {
               <div>
                 <p className="text-emerald-400 font-semibold">Head Prefects</p>
                 <p className="flex items-center gap-2">
-                  <User className="w-5 h-5" /> Hermione Granger
+                  <User className="w-5 h-5" /> Sahithyaa Krishnakumar
                 </p>
                 <p className="flex items-center gap-2">
-                  <User className="w-5 h-5" /> Harry Potter
+                  <User className="w-5 h-5" /> Jai Aakash
                 </p>
               </div>
               <div>
                 <p className="text-emerald-400 font-semibold">Floo Network</p>
                 <p className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Ron Weasley: +91 98765 43210
+                  <Phone className="w-5 h-5" /> Sahithyaa Krishnakumar: +91
+                  7305871144
                 </p>
                 <p className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Luna Lovegood: +91 91234 56789
+                  <Phone className="w-5 h-5" /> Jai Aakash: +91 6382336183
                 </p>
               </div>
               <div
                 className="flex items-center gap-2 cursor-pointer hover:text-emerald-400"
                 onClick={handleCopyEmail}
               >
-                <Mail className="w-5 h-5" /> hogwarts.events@srm.edu{" "}
+                <Mail className="w-5 h-5" /> ma0420@srm.edu{" "}
                 <Copy className="w-4 h-4" />
               </div>
             </div>
