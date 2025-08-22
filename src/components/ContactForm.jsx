@@ -193,7 +193,7 @@ const ContactUs = () => {
             </h3>
             <div className="space-y-4 text-gray-300 text-sm sm:text-base">
               <div>
-                <p className="text-emerald-400 font-semibold">COORDINATORS</p>
+                <p className="text-emerald-400 font-semibold">Head Prefects</p>
                 <p className="flex items-center gap-2">
                   <User className="w-5 h-5" /> Sahithyaa Krishnakumar
                 </p>
@@ -202,7 +202,7 @@ const ContactUs = () => {
                 </p>
               </div>
               <div>
-                <p className="text-emerald-400 font-semibold">CONTACT DETAILS</p>
+                <p className="text-emerald-400 font-semibold">Floo Network</p>
                 <p className="flex items-center gap-2">
                   <Phone className="w-5 h-5" /> Sahithyaa Krishnakumar: +91
                   7305871144
