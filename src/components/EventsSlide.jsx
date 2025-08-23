@@ -7,6 +7,7 @@ import {
   EffectCoverflow,
 } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -116,12 +117,26 @@ const Events = () => {
       className="relative py-20 bg-gradient-to-b from-black via-gray-950 to-black overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center text-emerald-400 tracking-widest relative drop-shadow-[0_0_40px_rgba(16,185,129,0.9)]">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center text-emerald-400 tracking-widest relative drop-shadow-[0_0_40px_rgba(16,185,129,0.9)]"
+        >
           Magical Events
-        </h2>
-        <p className="text-center text-gray-400 text-lg md:text-xl mb-12">
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-center text-gray-400 text-lg md:text-xl mb-12"
+        >
           Discover a world of technical challenges and innovative competitions
-        </p>
+        </motion.p>
 
         {/* Swiper Carousel */}
         <Swiper
@@ -146,18 +161,29 @@ const Events = () => {
           }}
           className="pb-16"
         >
-          {eventsData.map((event) => (
+          {eventsData.map((event, index) => (
             <SwiperSlide key={event.id}>
-              <div
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`group bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500 max-w-[350px] mx-auto relative`}
-                onClick={() => isMobile && navigate(`/events/${event.id}`)} // Open directly on mobile
+                onClick={() => isMobile && navigate(`/events/${event.id}`)}
               >
                 {/* Poster */}
                 <div className="relative w-full h-[450px] md:h-[520px] overflow-hidden">
-                  <img
+                  <motion.img
                     src={event.image}
                     alt={event.alt}
-                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: [1, 1.05, 1] }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
 
@@ -174,19 +200,26 @@ const Events = () => {
 
                 {/* Content on Hover - hidden on mobile */}
                 {!isMobile && (
-                  <div className="p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bottom-0 left-0 w-full bg-black/80">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileHover={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="p-6 absolute bottom-0 left-0 w-full bg-black/80"
+                  >
                     <p className="text-gray-400 mb-5 leading-relaxed">
                       {event.description}
                     </p>
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.05, rotate: -1 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => navigate(`/events/${event.id}`)}
                       className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
                     >
                       Learn More →
-                    </button>
-                  </div>
+                    </motion.button>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,22 +52,49 @@ const Navbar = () => {
       </span>
       <span
         className="absolute bottom-0 left-0 w-full h-[2px] 
-                   bg-gradient-to-r from-emerald-400 to-teal-300 
+                   bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400
                    transform scale-x-0 group-hover:scale-x-100 
-                   transition-transform duration-300 origin-left"
+                   transition-transform duration-500 origin-left"
       ></span>
     </>
   );
 
+  // Mobile menu animation variants
+  const menuVariants = {
+    hidden: { height: 0, opacity: 0 },
+    visible: {
+      height: "auto",
+      opacity: 1,
+      transition: { duration: 0.5, ease: [0.25, 1, 0.5, 1] },
+    },
+    exit: { height: 0, opacity: 0, transition: { duration: 0.4 } },
+  };
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.15, type: "spring", stiffness: 200 },
+    }),
+    exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black h-[80px]">
-      <div className="w-full px-6 h-full flex justify-between items-center bg-transparent border-b border-emerald-500/30">
-        {/* Logo - perfectly fits navbar */}
-        <Link to="/" className="flex items-center">
-          <img
+    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black/90 h-[80px] backdrop-blur-lg shadow-[0_4px_30px_rgba(16,185,129,0.25)]">
+      <div className="w-full px-6 h-full flex justify-between items-center border-b border-emerald-500/30">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="flex items-center group hover:scale-105 transition-transform duration-300"
+        >
+          <motion.img
             src="/logo.png"
             alt="Triwizard Logo"
-            className="h-[180px] w-[200px] object-contain p-0"
+            className="h-[180px] w-[200px] object-contain pt-10"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 200 }}
           />
         </Link>
 
@@ -84,26 +112,43 @@ const Navbar = () => {
             className="text-gray-200 focus:outline-none"
           >
             {isOpen ? (
-              <X className="w-8 h-8 hover:text-emerald-300" />
+              <X className="w-8 h-8 hover:text-emerald-300 transition-colors" />
             ) : (
-              <Menu className="w-8 h-8 hover:text-emerald-300" />
+              <Menu className="w-8 h-8 hover:text-emerald-300 transition-colors" />
             )}
           </button>
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-lg border-b border-emerald-500/30 shadow-lg">
-          <div className="flex flex-col space-y-4 p-6">
-            {navItems.map((item) => (
-              <div key={item.name} onClick={() => setIsOpen(false)}>
-                {handleNavClick(item)}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Mobile Dropdown with staggered animation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="md:hidden bg-black/90 backdrop-blur-2xl border-b border-emerald-500/30 shadow-[0_4px_20px_rgba(16,185,129,0.4)]"
+          >
+            <div className="flex flex-col space-y-6 p-6">
+              {navItems.map((item, i) => (
+                <motion.div
+                  key={item.name}
+                  custom={i}
+                  variants={linkVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  onClick={() => setIsOpen(false)}
+                  className="text-center"
+                >
+                  {handleNavClick(item)}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

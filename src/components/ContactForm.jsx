@@ -130,14 +130,14 @@ const ContactUs = () => {
               <motion.img
                 src="/srmlogo.png"
                 alt="SRM Logo"
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                className="w-20 sm:w-28 rounded-xl border border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all"
+                whileHover={{ scale: 1.1, }}
+                className="w-20 sm:w-28 h-12 rounded-xl border border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all"
               />
               <motion.img
                 src="/dilogo.jpeg"
                 alt="DI Logo"
-                whileHover={{ scale: 1.1, rotate: -3 }}
-                className="w-20 sm:w-28 h-30 rounded-full border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all"
+                whileHover={{ scale: 1.1,}}
+                className="w-20 sm:w-28 h-22 rounded-xl border-2 border-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)] hover:shadow-[0_0_45px_rgba(16,185,129,1)] transition-all "
               />
             </div>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
