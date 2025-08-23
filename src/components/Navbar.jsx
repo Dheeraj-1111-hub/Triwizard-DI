@@ -82,7 +82,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black/90 h-[80px] backdrop-blur-lg shadow-[0_4px_30px_rgba(16,185,129,0.25)]">
-      <div className="w-full px-6 h-full flex justify-between items-center border-b border-emerald-500/30">
+      <div className="w-full px-2 h-full flex justify-between items-center border-b border-emerald-500/30">
         {/* Logo */}
         <Link
           to="/"
@@ -91,7 +91,9 @@ const Navbar = () => {
           <motion.img
             src="/logo.png"
             alt="Triwizard Logo"
-            className="h-[120px] w-[140px] object-contain pt-4 sm:h-[150px] sm:w-[170px] sm:pt-6 md:h-[180px] md:w-[200px] md:pt-10"
+            className="h-[140px] w-[160px] object-contain pt-5 
+             sm:h-[180px] sm:w-[210px] sm:pt-4 
+             md:h-[220px] md:w-[260px] md:pt-10"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200 }}
