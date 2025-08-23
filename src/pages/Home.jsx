@@ -10,12 +10,11 @@ const Home = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    // Hide cursor for small screens (like mobiles)
     const checkScreen = () => {
-      setShowCursor(window.innerWidth > 768); // Show only for tablets/desktops
+      setShowCursor(window.innerWidth > 768);
     };
 
-    checkScreen(); // run initially
+    checkScreen();
     window.addEventListener("resize", checkScreen);
 
     return () => window.removeEventListener("resize", checkScreen);
@@ -33,7 +32,11 @@ const Home = () => {
   }, [showCursor]);
 
   return (
-    <div className={`relative min-h-screen ${showCursor ? "cursor-none" : ""}`}>
+    <div
+      className={`relative min-h-screen ${
+        showCursor ? "cursor-none" : ""
+      } bg-gradient-to-b from-black via-sky-950 to-black`}
+    >
       {/* Floating Navbar */}
       <div className="absolute top-0 left-0 w-full z-50">
         <Navbar />
@@ -54,19 +57,45 @@ const Home = () => {
 
       <Footer />
 
-      {/* Wand Cursor (only on desktop) */}
+      {/* Wand Cursor + Flamy Blue Aura */}
       {showCursor && (
-        <img
-          src="/cursor.png"
-          alt="wand cursor"
-          className="pointer-events-none fixed w-12 h-12 z-[100]"
-          style={{
-            left: position.x,
-            top: position.y,
-            transform: "translate(-30%, -30%)",
-          }}
-        />
+        <>
+          {/* Wand */}
+          <img
+            src="/cursor.png"
+            alt="wand cursor"
+            className="pointer-events-none fixed w-12 h-12 z-[100]"
+            style={{
+              left: position.x,
+              top: position.y,
+              transform: "translate(-30%, -30%)",
+            }}
+          />
+
+          
+        </>
       )}
+
+      {/* Keyframes for flame effect */}
+      <style jsx>{`
+        @keyframes flamePulse {
+          0% {
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.6),
+              0 0 25px rgba(59, 130, 246, 0.4),
+              0 0 45px rgba(96, 165, 250, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.9),
+              0 0 40px rgba(59, 130, 246, 0.7),
+              0 0 70px rgba(147, 197, 253, 0.6);
+          }
+          100% {
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.6),
+              0 0 25px rgba(59, 130, 246, 0.4),
+              0 0 45px rgba(96, 165, 250, 0.3);
+          }
+        }
+      `}</style>
     </div>
   );
 };

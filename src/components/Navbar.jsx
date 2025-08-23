@@ -44,17 +44,18 @@ const Navbar = () => {
     <>
       <span
         className="tracking-wide text-lg relative z-10 
-                   group-hover:text-emerald-300 
-                   group-hover:drop-shadow-[0_0_12px_#10b981]
+                   group-hover:text-blue-400 
+                   group-hover:animate-flameBlue
                    transition-all duration-300"
       >
         {name}
       </span>
       <span
         className="absolute bottom-0 left-0 w-full h-[2px] 
-                   bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400
+                   bg-gradient-to-r from-blue-400 via-sky-500 to-cyan-400
                    transform scale-x-0 group-hover:scale-x-100 
-                   transition-transform duration-500 origin-left"
+                   transition-transform duration-500 origin-left
+                   group-hover:animate-flameBlue"
       ></span>
     </>
   );
@@ -81,8 +82,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black/90 h-[80px] backdrop-blur-lg shadow-[0_4px_30px_rgba(16,185,129,0.25)]">
-      <div className="w-full px-2 h-full flex justify-between items-center border-b border-emerald-500/30">
+    <nav className="fixed top-0 left-0 w-full z-50 font-[Cinzel] bg-black/90 h-[80px] backdrop-blur-lg ">
+      <div className="w-full px-2 h-full flex justify-between items-center border-b border-blue-400/40">
         {/* Logo */}
         <Link
           to="/"
@@ -114,9 +115,9 @@ const Navbar = () => {
             className="text-gray-200 focus:outline-none"
           >
             {isOpen ? (
-              <X className="w-8 h-8 hover:text-emerald-300 transition-colors" />
+              <X className="w-8 h-8 hover:text-blue-400 transition-colors" />
             ) : (
-              <Menu className="w-8 h-8 hover:text-emerald-300 transition-colors" />
+              <Menu className="w-8 h-8 hover:text-blue-400 transition-colors" />
             )}
           </button>
         </div>
@@ -130,7 +131,7 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden bg-black/90 backdrop-blur-2xl border-b border-emerald-500/30 shadow-[0_4px_20px_rgba(16,185,129,0.4)]"
+            className="md:hidden bg-black/90 backdrop-blur-2xl border-b border-blue-400/40 shadow-[0_0_25px_rgba(59,130,246,0.6)]"
           >
             <div className="flex flex-col space-y-6 p-6">
               {navItems.map((item, i) => (

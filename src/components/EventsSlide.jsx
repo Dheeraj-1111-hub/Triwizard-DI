@@ -123,7 +123,9 @@ const Events = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center text-emerald-400 tracking-widest relative drop-shadow-[0_0_40px_rgba(16,185,129,0.9)]"
+          className="text-4xl md:text-5xl font-[Cinzel] mb-6 text-center 
+                     text-blue-400 tracking-widest relative 
+                     drop-shadow-[0_0_40px_rgba(59,130,246,0.9)] animate-flameBlue"
         >
           Magical Events
         </motion.h2>
@@ -168,7 +170,11 @@ const Events = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`group bg-black/70 border border-emerald-500/30 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_55px_rgba(16,185,129,0.8)] transition-all duration-500 max-w-[350px] mx-auto relative`}
+                className={`group bg-black/70 border border-blue-500/40 rounded-2xl 
+                           overflow-hidden shadow-[0_0_25px_rgba(59,130,246,0.4)] 
+                           hover:shadow-[0_0_60px_rgba(59,130,246,0.9)] 
+                           transition-all duration-500 max-w-[350px] mx-auto relative 
+                           animate-flameBlue`}
                 onClick={() => isMobile && navigate(`/events/${event.id}`)}
               >
                 {/* Poster */}
@@ -189,10 +195,10 @@ const Events = () => {
 
                   {/* Date & Title at Bottom */}
                   <div className="absolute bottom-4 left-0 w-full text-center px-3">
-                    <div className="bg-emerald-500/20 inline-block px-3 py-1 rounded-full text-emerald-300 text-sm shadow-sm mb-2">
+                    <div className="bg-blue-500/20 inline-block px-3 py-1 rounded-full text-blue-300 text-sm shadow-sm mb-2">
                       {event.date}
                     </div>
-                    <h3 className="text-2xl font-[Cinzel] text-emerald-300 drop-shadow-[0_0_20px_rgba(16,185,129,0.8)]">
+                    <h3 className="text-2xl font-[Cinzel] text-blue-300 drop-shadow-[0_0_20px_rgba(59,130,246,0.8)] animate-flameBlue">
                       {event.title}
                     </h3>
                   </div>
@@ -210,10 +216,16 @@ const Events = () => {
                       {event.description}
                     </p>
                     <motion.button
-                      whileHover={{ scale: 1.05, rotate: -1 }}
+                      whileHover={{ scale: 1.05,}}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => navigate(`/events/${event.id}`)}
-                      className="px-6 py-2 border border-emerald-400 text-emerald-300 rounded-lg font-semibold tracking-wide hover:bg-emerald-400 hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)]"
+                      className="px-6 py-2 border border-blue-400 text-blue-300 
+                                 rounded-lg font-semibold tracking-wide 
+                                 hover:bg-blue-400 hover:text-black 
+                                 transition-all duration-300 
+                                 shadow-[0_0_15px_rgba(59,130,246,0.5)] 
+                                 hover:shadow-[0_0_35px_rgba(59,130,246,0.9)] 
+                                 animate-flameBlue"
                     >
                       Learn More →
                     </motion.button>

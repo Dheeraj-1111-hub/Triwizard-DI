@@ -202,29 +202,28 @@ const EventPage = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-black via-gray-950 to-black font-sans">
+    <section className="relative min-h-screen bg-gradient-to-b from-black via-sky-950 to-black font-sans">
       <Navbar />
 
-      {/* Magical Particle Background */}
+      {/* Flamy Blue Particle Background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full"
+            className="absolute w-2 h-2 rounded-full bg-sky-400"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              backgroundColor: ["#10B981", "#3B82F6", "#FBBF24"][i % 3],
-              opacity: 0.4 + Math.random() * 0.5,
-              filter: "blur(3px)",
+              opacity: 0.3 + Math.random() * 0.6,
+              filter: "blur(4px)",
             }}
             animate={{
-              y: ["0%", `${Math.random() * 80 - 40}%`, "0%"],
-              x: ["0%", `${Math.random() * 80 - 40}%`, "0%"],
+              y: ["0%", `${Math.random() * 60 - 30}%`, "0%"],
+              x: ["0%", `${Math.random() * 60 - 30}%`, "0%"],
             }}
             transition={{
               repeat: Infinity,
-              duration: 10 + Math.random() * 6,
+              duration: 8 + Math.random() * 6,
               ease: "easeInOut",
             }}
           />
@@ -233,7 +232,7 @@ const EventPage = () => {
 
       <div className="relative z-10 container mx-auto px-4 lg:px-10 py-12 mt-10">
         {/* Event Layout */}
-        <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-[0_0_80px_rgba(16,185,129,0.7)] border border-emerald-400/40 backdrop-blur-2xl">
+        <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-sky-400/40 backdrop-blur-2xl">
           {/* Poster Section */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -248,7 +247,7 @@ const EventPage = () => {
               className="w-full h-96 lg:h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
-            <h2 className="absolute bottom-6 left-6 text-4xl sm:text-5xl font-[Cinzel] text-emerald-300 drop-shadow-[0_0_15px_rgba(16,185,129,0.9)]">
+            <h2 className="absolute bottom-6 left-6 text-4xl sm:text-5xl font-[Cinzel] text-sky-300 drop-shadow-[0_0_20px_rgba(56,189,248,0.9)]">
               {event.title}
             </h2>
           </motion.div>
@@ -270,9 +269,9 @@ const EventPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.4 }}
-              className="p-5 bg-gradient-to-br from-emerald-500/10 to-emerald-700/20 rounded-2xl border border-emerald-400/30 shadow-lg"
+              className="p-5 bg-gradient-to-br from-sky-500/10 to-sky-700/20 rounded-2xl border border-sky-400/30 shadow-lg"
             >
-              <h3 className="text-xl font-semibold text-emerald-300 mb-3">
+              <h3 className="text-xl font-semibold text-sky-300 mb-3">
                 GUIDELINES
               </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -283,26 +282,25 @@ const EventPage = () => {
             </motion.div>
 
             {/* Info Grid */}
-            {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300">
               {/* Time */}
               <motion.div
-                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #38bdf8" }}
+                className="p-4 bg-black/40 rounded-xl border border-sky-400/30 backdrop-blur-md"
               >
-                <span className="font-semibold text-emerald-300">Time:</span>{" "}
+                <span className="font-semibold text-sky-300">Time:</span>{" "}
                 {event.time}
               </motion.div>
 
-              {/* Venue + Price in same box */}
+              {/* Venue + Price */}
               <motion.div
-                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #38bdf8" }}
+                className="p-4 bg-black/40 rounded-xl border border-sky-400/30 backdrop-blur-md"
               >
-                <span className="font-semibold text-emerald-300">Venue:</span>{" "}
+                <span className="font-semibold text-sky-300">Venue:</span>{" "}
                 {event.venue}
                 <br />
-                <span className="font-semibold text-emerald-300">
+                <span className="font-semibold text-sky-300">
                   Participation Fee:
                 </span>{" "}
                 {event.participationFee}
@@ -310,10 +308,10 @@ const EventPage = () => {
 
               {/* Participants */}
               <motion.div
-                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #38bdf8" }}
+                className="p-4 bg-black/40 rounded-xl border border-sky-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
               >
-                <span className="font-semibold text-emerald-300 mb-2">
+                <span className="font-semibold text-sky-300 mb-2">
                   Participants:
                 </span>
                 <span className="text-center">{event.participants}</span>
@@ -321,10 +319,10 @@ const EventPage = () => {
 
               {/* Coordinators */}
               <motion.div
-                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #10B981" }}
-                className="p-4 bg-black/40 rounded-xl border border-emerald-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px #38bdf8" }}
+                className="p-4 bg-black/40 rounded-xl border border-sky-400/30 backdrop-blur-md flex flex-col items-center justify-start text-m leading-snug"
               >
-                <span className="font-semibold text-emerald-300 mb-2">
+                <span className="font-semibold text-sky-300 mb-2">
                   Student Coordinators:
                 </span>
                 <div className="flex flex-col gap-1 text-center">
@@ -335,12 +333,9 @@ const EventPage = () => {
               </motion.div>
             </div>
 
-            {/* QR + CTA */}
-
+            {/* CTA */}
             <div>
               <div className="mt-10 text-center">
-                <h3 className="text-2xl font-semibold text-emerald-300 mb-6"></h3>
-
                 <div className="flex justify-center mt-4">
                   <motion.button
                     onClick={() => {
@@ -350,7 +345,7 @@ const EventPage = () => {
                         alert("Google Form link will be updated soon!");
                       }
                     }}
-                    className="px-6 py-3 bg-transparent text-emerald-400 font-harry text-lg rounded-xl border border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.6)] transition-all duration-300 hover:text-emerald-300 hover:shadow-[0_0_35px_rgba(16,185,129,1)] hover:scale-105"
+                    className="px-6 py-3 bg-transparent text-sky-400 font-harry text-lg rounded-xl border border-sky-500 shadow-[0_0_20px_rgba(56,189,248,0.6)] transition-all duration-300 hover:text-sky-300 hover:shadow-[0_0_35px_rgba(56,189,248,1)] hover:scale-105"
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 200 }}
                   >

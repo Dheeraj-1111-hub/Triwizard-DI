@@ -42,24 +42,33 @@ const HeroVideo = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-      {/* Responsive Mute/Unmute Button */}
+      {/* Mute/Unmute Button */}
       <button
         onClick={toggleMute}
-        className="absolute top-25 right-5 md:right-10 z-20 bg-green-500/80 text-black p-3 md:p-4 rounded-full flex items-center justify-center hover:bg-green-400 transition shadow-lg"
+        className="absolute top-24 right-5 md:right-10 z-20 
+                   bg-black/60 backdrop-blur-sm p-3 md:p-4 rounded-full
+                   flex items-center justify-center 
+                   hover:scale-110 transition-transform duration-300
+                   
+                   animate-flameBlue"
       >
         {isMuted ? (
-          <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-black" />
+          <VolumeX className="w-6 h-6 text-blue-400" />
         ) : (
-          <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-black" />
+          <Volume2 className="w-6 h-6 text-blue-400" />
         )}
       </button>
 
       {/* Scroll Down Arrow */}
       <div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce z-20"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 
+                   cursor-pointer z-20 animate-bounce"
         onClick={scrollToNext}
       >
-        <span className="material-symbols-outlined text-4xl text-green-400/80">
+        <span
+          className="material-symbols-outlined text-5xl text-blue-400 
+                     animate-flameBlue"
+        >
           keyboard_double_arrow_down
         </span>
       </div>
