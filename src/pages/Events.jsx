@@ -13,9 +13,18 @@ const eventDetails = [
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Follow instructions carefully.",
-      "Maintain fairness and discipline.",
+      "Participation: Solo event; each participant uses one laptop",
+      {
+        title: "Rounds:",
+        subpoints: [
+          "Round 1: Rapid-fire Python quiz",
+          "Round 2: Coding challenges under time limit",
+        ],
+      },
+      "Allowed: Local Python installation and official documentation",
+      "Not Allowed: AI tools, external code repositories, or plagiarism",
+      "Submission: Late submissions will not be accepted",
+      "Fair Play: Judges’ decision is final",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -33,9 +42,12 @@ const eventDetails = [
     description:
       "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Original work only.",
-      "Digital submissions must be in PNG/JPEG format.",
+      "Participation: Solo event",
+      "Task: Design an original or reimagined magical creature with its traits and lore",
+      "Only original work during event time",
+      "No AI-generated images or pre-made artworks",
+      "Use provided template size (A4 or 1920×1080)",
+      "Submission: Must be within the given time; late entries will not be accepted",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -53,9 +65,19 @@ const eventDetails = [
     description:
       "A fast-paced coding face-off where teams of 2 race to spot, identify and fix intentional errors in code snippets across multiple languages.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Respect the time limits strictly.",
-      "No external assistance allowed.",
+      "Team Size: 2 players per team",
+      "Format: 3 rounds of debugging challenges in C, C++, Java, Python, and JavaScript",
+      {
+        title: "Round Structure:",
+        subpoints: [
+          "Round 1: Syntax errors",
+          "Round 2: Logical errors",
+          "Round 3: Mixed difficulty bugs",
+        ],
+      },
+      "Scoring: Full fix = 10 points; partial fix = 5 points; no negative marks",
+      "Restrictions: Internet limited to official documentation; no use of AI tools",
+      "Fair Play: No plagiarism, no copying between teams",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -73,9 +95,11 @@ const eventDetails = [
     description:
       "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Follow gamemaster's instructions strictly.",
-      "Play fair and respect competitors.",
+      "Team Size: 4 players per team",
+      "Format: Complete 8 mini-games while tethered together; collect at least 7 Horcrux tokens and assemble the final sigil",
+      "Special Rule: Respond to “Petrificus Totalus” freeze commands instantly; failure leads to penalties",
+      "Restrictions: No interference with other teams; no outside assistance",
+      "Fair Play: Respect opponents and follow instructions; repeated violations lead to disqualification",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -93,9 +117,11 @@ const eventDetails = [
     description:
       "A fast-paced Kahoot-style trivia challenge on all things Harry Potter—finish the quotes, guess what comes next, and prove your wizarding wisdom!",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "No external devices allowed.",
-      "Decisions of quizmasters are final.",
+      "Participation: Solo event",
+      "Format: Online quiz hosted in Kahoot-style; participants need a phone or laptop with internet access",
+      "Content: Questions from Harry Potter books and movies, spells, creatures, quotes, and lore",
+      "Scoring: Faster correct answers earn higher points; tie-breaker round if needed",
+      "Fair Play: No external help or use of reference material",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -116,9 +142,11 @@ const eventDetails = [
     description:
       "Three teams battle it out by building, defending, and attacking castles—strategy meets speed, and the team with the most cups standing claims victory.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Team spirit is a must.",
-      "Respect opponent’s strategy.",
+      "Team Size: 3 players per team",
+      "Setup: Build a castle using provided materials within 5 minutes",
+      "Gameplay: After building, teams defend their castle and attack others using soft projectiles",
+      "Restrictions: No body shielding, no tampering before the game begins",
+      "Scoring: Team with the most structure left after the time ends wins; tie-breaker with sudden attack round",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -136,9 +164,14 @@ const eventDetails = [
     description:
       "Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Own controllers allowed (optional).",
-      "Fair play required at all times.",
+      "Team Size: 2 players per team",
+      "Equipment: Consoles and controllers provided",
+      "Match Format: 8 minutes (4 minutes per half), Kick-Off mode, standard settings",
+      "Knockout Rules: Extra time (two halves of three minutes) and penalties if required",
+      "Team Selection: Any official club or national team; no changes after match starts",
+      "Pausing: Only when the ball is out of play; misuse leads to penalty",
+      "Fair Play: No glitches, no tampering, no unsporting behaviour",
+      "Progression: Single-elimination; winners advance to final",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -156,9 +189,19 @@ const eventDetails = [
     description:
       "Join our BGMI Tournament for a professional, high-intensity competition showcasing strategic gameplay and fair sportsmanship.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Play on your own devices.",
-      "Stable internet connection required.",
+      "Team Size: 2 or 4 players per team",
+      "Devices: Players must bring their own smartphones and internet connection; earphones allowed; no controllers or triggers",
+      "Game Version: Latest official BGMI version only; hacks lead to disqualification",
+      {
+        title: "Format:",
+        subpoints: [
+          "Round 1: Battle Royale on Erangel; scoring based on kills and placement; top 10 teams advance",
+          "Round 2: Knockout Player versus Player matches in custom rooms; single elimination",
+        ],
+      },
+      "Match Rules: No teaming with outside squads, no stream sniping, no cheating",
+      "Fair Play: Respect referees and opponents; no offensive names or abusive language",
+      "Progression: Winners advance through knockouts until the final",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -176,9 +219,11 @@ const eventDetails = [
     description:
       "Get ready for laughs and lip-reading in the Whisper Challenge! Test your team's communication skills in this hilarious game of misheard phrases.",
     guidelines: [
-      "Arrive at least 30 minutes before the event.",
-      "Respect time limits.",
-      "Keep the energy fun and lighthearted.",
+      "Team Size: 4 players per team",
+      "Setup: One player wears headphones with music, others pass the phrase by whispering",
+      "Communication: Only one whisper per phrase; no hand signals or repetitions",
+      "Scoring: One point per correct phrase; In case of a tie, tie-breaker will decide the winner.",
+      "Fair Play: Keep it fun; no shouting, no disrespect to other teams",
     ],
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
@@ -274,10 +319,37 @@ const EventPage = () => {
               <h3 className="text-xl font-semibold text-sky-300 mb-3">
                 GUIDELINES
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                {event.guidelines.map((g, i) => (
-                  <li key={i}>{g}</li>
-                ))}
+              <ul className="list-disc pl-5 text-gray-300 space-y-2">
+                {event.guidelines.map((g, i) =>
+                  typeof g === "string" ? (
+                    <li
+                      key={i}
+                      className="leading-relaxed break-words"
+                      style={{ wordBreak: "break-word" }}
+                    >
+                      {g}
+                    </li>
+                  ) : (
+                    <li
+                      key={i}
+                      className="leading-relaxed break-words"
+                      style={{ wordBreak: "break-word" }}
+                    >
+                      {g.title}
+                      <ul className="list-disc pl-6 mt-1 space-y-1 text-gray-400">
+                        {g.subpoints.map((sp, index) => (
+                          <li
+                            key={index}
+                            className="leading-relaxed break-words"
+                            style={{ wordBreak: "break-word" }}
+                          >
+                            {sp}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
+                )}
               </ul>
             </motion.div>
 
