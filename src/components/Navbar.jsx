@@ -91,7 +91,7 @@ const Navbar = () => {
           <motion.img
             src="/logo.png"
             alt="Triwizard Logo"
-            className="h-[180px] w-[200px] object-contain pt-10"
+            className="h-[120px] w-[140px] object-contain pt-4 sm:h-[150px] sm:w-[170px] sm:pt-6 md:h-[180px] md:w-[200px] md:pt-10"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200 }}
