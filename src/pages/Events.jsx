@@ -345,8 +345,10 @@ const EventPage = () => {
                         alert("Google Form link will be updated soon!");
                       }
                     }}
-                    className="px-6 py-3 bg-transparent text-sky-400 font-harry text-lg rounded-xl border border-sky-500 shadow-[0_0_20px_rgba(56,189,248,0.6)] transition-all duration-300 hover:text-sky-300 hover:shadow-[0_0_35px_rgba(56,189,248,1)] hover:scale-105"
-                    whileHover={{ scale: 1.1 }}
+                    className="px-6 py-3 text-sky-400 border border-sky-400 rounded-xl font-medium text-lg 
+             transition-all duration-300 ease-in-out
+             hover:bg-sky-400 hover:text-black hover:scale-110 hover:cursor-pointer"
+                    whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 200 }}
                   >
                     Register Now
