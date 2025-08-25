@@ -225,7 +225,7 @@ const eventDetails = [
       "Scoring: One point per correct phrase; In case of a tie, tie-breaker will decide the winner.",
       "Fair Play: Keep it fun; no shouting, no disrespect to other teams",
     ],
-    time: "September 11, 2023, 9:00 AM - 3:00 PM",
+    time: "September 11, 2025, 9:00 AM - 3:00 PM",
     venue: "BW 107",
     studentcoordinators: ["Shanmathi - 6379479176", "Nithila - 8122992345"],
     queries: "Need to be added",
