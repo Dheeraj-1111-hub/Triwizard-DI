@@ -13,7 +13,7 @@ const eventDetails = [
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
     guidelines: [
-      "Participation: Solo event; each participant uses one laptop",
+      "Participation: Solo and Duo event; each participant/team uses one laptop",
       {
         title: "Rounds:",
         subpoints: [
@@ -30,8 +30,8 @@ const eventDetails = [
     venue: "CSE Lab 2",
     studentcoordinators: ["Sura reddy - 8332831328", "Kamalesh - 9444411410"],
     queries: "Need to be added",
-    participants: "1 per registration",
-    participationFee: "₹80",
+    participants: "1 or 2 per registration",
+    participationFee: "₹80 for Solo and ₹140 for Duo",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSdNeo1V0QMknTxFzaUwNlmB8GhfgqADKUzDwEoWpxJbkow1DA/viewform?usp=header",
   },
