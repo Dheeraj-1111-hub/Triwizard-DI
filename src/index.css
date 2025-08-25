@@ -13,22 +13,22 @@ body {
 
 /* Swiper pagination (dots) */
 .swiper-pagination-bullet {
-  background: rgba(16, 185, 129, 0.4) !important; /* emerald-500 light */
+  background: rgba(59, 130, 246, 0.4) !important; /* emerald-500 light */
 }
 .swiper-pagination-bullet-active {
-  background: rgba(16, 185, 129, 1) !important; /* emerald-500 */
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+  background: rgba(59, 130, 246, 1) !important; /* emerald-500 */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
 }
 
 /* Swiper navigation arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: rgba(16, 185, 129, 0.8) !important; /* emerald-500 */
-  text-shadow: 0 0 15px rgba(16, 185, 129, 0.9);
+  color: rgba(59, 130, 246, 0.8) !important; /* emerald-500 */
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.9);
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: rgba(20, 255, 160, 1) !important; /* brighter emerald */
+  color: rgba(59, 130, 246, 1) !important; /* brighter emerald */
 }
 @keyframes spin-slow {
   0% {
