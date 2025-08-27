@@ -100,12 +100,12 @@ const eventDetails = [
     time: "May 15, 2023, 10:00 AM - 5:00 PM",
     venue: "To be announced",
     studentcoordinators: [
-      " Rohit Vikrant - 9080345650 ",
+      " Rohit S - 9080345650 ",
       " Sandhya - 9500698899",
     ],
     queries: "Need to be added",
-    participants: "1 per registration",
-    participationFee: "₹60",
+    participants: "1 per registration / Team of 2",
+    participationFee: "₹60 per head",
     formLink:
       "https://docs.google.com/forms/d/e/1FAIpQLSekV7zRYx21SYzmBhsdIcX1UKWWATkNwNGQ9rU4qUrmP_uiyg/viewform?usp=header",
   },
