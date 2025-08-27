@@ -68,3 +68,26 @@ body {
 .font-harry {
   font-family: "HarryP", serif;
 }
+/* Change Swiper Navigation (arrows) color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6 !important; /* Tailwind's blue-500 */
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+}
+
+/* Keep the same color on hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #3b82f6 !important;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+}
+
+/* Change Swiper Pagination (dots) color */
+.swiper-pagination-bullet {
+  background: rgba(59, 130, 246, 0.5) !important; /* lighter blue */
+}
+
+.swiper-pagination-bullet-active {
+  background: #3b82f6 !important; /* solid blue when active */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+}
