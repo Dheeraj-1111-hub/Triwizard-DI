@@ -1,17 +1,22 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Volume2, VolumeX } from "lucide-react"; // speaker icons
+import React, { useRef, useState, useLayoutEffect } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 
 const HeroVideo = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [videoSrc, setVideoSrc] = useState("/promo.mp4"); // default video for desktop
+  const [videoSrc, setVideoSrc] = useState("");
 
-  // Detect screen size or mobile device
-  useEffect(() => {
-    const isMobile = window.innerWidth <= 768; // adjust breakpoint if needed
-    if (isMobile) {
-      setVideoSrc("/promo-mobile.mp4"); // your mobile-specific video
-    }
+  // Check screen size immediately on mount & when window resizes
+  const updateVideoSource = () => {
+    const isMobile = window.innerWidth <= 768;
+    setVideoSrc(isMobile ? "/promo-mobile.mp4" : "/promo.mp4");
+  };
+
+  useLayoutEffect(() => {
+    updateVideoSource(); // run on initial load
+    window.addEventListener("resize", updateVideoSource); // handle resizing too
+
+    return () => window.removeEventListener("resize", updateVideoSource);
   }, []);
 
   // Smooth scroll to next section
@@ -36,17 +41,20 @@ const HeroVideo = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover bg-black"
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {videoSrc && (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          key={videoSrc} // ensures re-render when source changes
+          className="absolute inset-0 w-full h-full object-cover bg-black"
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
