@@ -8,7 +8,7 @@ const eventDetails = [
   {
     id: 2,
     title: "Python Showdown",
-    poster: "/PythonShowdown.jpg",
+    poster: "/eventimages/Python Showdown.jpg",
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
     guidelines: [
@@ -37,7 +37,7 @@ const eventDetails = [
   {
     id: 3,
     title: "Creature Canvas",
-    poster: "/CreatureCanvas.jpg",
+    poster: "/eventimages/Creature Canvas.jpg",
     description:
       "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
     guidelines: [
@@ -60,7 +60,7 @@ const eventDetails = [
   {
     id: 4,
     title: "Curse-Breaker",
-    poster: "/CurseBreakers.jpg",
+    poster: "/eventimages/Curse.jpg",
     description:
       "A fast-paced coding face-off where teams of 2 race to spot, identify and fix intentional errors in code snippets across multiple languages.",
     guidelines: [
@@ -90,7 +90,7 @@ const eventDetails = [
   {
     id: 5,
     title: "Hunt for the Horcrux",
-    poster: "/Hunt.jpg",
+    poster: "/eventimages/Hunt.jpg",
     description:
       "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win.",
     guidelines: [
@@ -112,7 +112,7 @@ const eventDetails = [
   {
     id: 6,
     title: "Harry Potter Trivia",
-    poster: "/Trivia.jpg",
+    poster: "/eventimages/Trivia.jpg",
     description:
       "A fast-paced Kahoot-style trivia challenge on all things Harry Potter—finish the quotes, guess what comes next, and prove your wizarding wisdom!",
     guidelines: [
@@ -134,7 +134,7 @@ const eventDetails = [
   {
     id: 7,
     title: "Secure the Castle",
-    poster: "/SecureTheCastle.jpg",
+    poster: "/eventimages/Secure.jpg",
     description:
       "Three teams battle it out by building, defending, and attacking castles—strategy meets speed, and the team with the most cups standing claims victory.",
     guidelines: [
@@ -156,7 +156,7 @@ const eventDetails = [
   {
     id: 9,
     title: "FIFA",
-    poster: "/Fifa.jpg",
+    poster: "/eventimages/2.jpg",
     description:
       "Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
     guidelines: [
@@ -181,7 +181,7 @@ const eventDetails = [
   {
     id: 10,
     title: "BGMI",
-    poster: "/BGMI.jpg",
+    poster: "/eventimages/3.jpg",
     description:
       "Join our BGMI Tournament for a professional, high-intensity competition showcasing strategic gameplay and fair sportsmanship.",
     guidelines: [
@@ -211,7 +211,7 @@ const eventDetails = [
   {
     id: 12,
     title: "Whisper Challenge",
-    poster: "/Whisper.jpg",
+    poster: "/eventimages/1.jpg",
     description:
       "Get ready for laughs and lip-reading in the Whisper Challenge! Test your team's communication skills in this hilarious game of misheard phrases.",
     guidelines: [

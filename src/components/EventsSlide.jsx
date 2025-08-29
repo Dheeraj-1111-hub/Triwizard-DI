@@ -20,7 +20,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
-    image: "/eventimages/TECH.jpg",
+    image: "/eventimages/Python Showdown.jpg",
     alt: "Python Showdown",
   },
   {
@@ -29,7 +29,7 @@ const eventsData = [
     date: "September 10, 2025",
     description:
       "Unleash your imagination by redesigning a creature, fusing beings from the Harry Potter universe, or inventing your own! Showcase its look, habitat, and magical powers with a short caption—judged on creativity and detail.",
-    image: "/eventimages/Canvas.jpg",
+    image: "/eventimages/Creature Canvas.jpg",
     alt: "Creature Canvas",
   },
   {
@@ -216,7 +216,7 @@ const Events = () => {
                       {event.description}
                     </p>
                     <motion.button
-                      whileHover={{ scale: 1.05,}}
+                      whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => navigate(`/events/${event.id}`)}
                       className="px-6 py-2 border border-blue-400 text-blue-300 
