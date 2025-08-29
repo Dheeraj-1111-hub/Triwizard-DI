@@ -12,9 +12,23 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Events", path: "events" },
     { name: "Contact Us", path: "contact-us" },
+    { name: "Sorter", external: true, url: "https://sorter-triwizard.vercel.app/" },
   ];
 
   const handleNavClick = (item) => {
+    if (item.external) {
+      return (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative group text-gray-200"
+        >
+          {renderLinkText(item.name)}
+        </a>
+      );
+    }
+
     if (item.name === "Home") {
       return (
         <Link to="/" className="relative group text-gray-200">
