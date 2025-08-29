@@ -1,9 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react"; // speaker icons
 
 const HeroVideo = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [videoSrc, setVideoSrc] = useState("/promo.mp4"); // default video for desktop
+
+  // Detect screen size or mobile device
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768; // adjust breakpoint if needed
+    if (isMobile) {
+      setVideoSrc("/promo-mobile.mp4"); // your mobile-specific video
+    }
+  }, []);
 
   // Smooth scroll to next section
   const scrollToNext = () => {
@@ -19,7 +28,7 @@ const HeroVideo = () => {
       videoRef.current.muted = !videoRef.current.muted;
       setIsMuted(videoRef.current.muted);
       if (!videoRef.current.muted) {
-        videoRef.current.play(); // ensure it plays with sound
+        videoRef.current.play();
       }
     }
   };
@@ -35,7 +44,7 @@ const HeroVideo = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover bg-black"
       >
-        <source src="/promo.mp4" type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -49,7 +58,6 @@ const HeroVideo = () => {
                    bg-black/60 backdrop-blur-sm p-3 md:p-4 rounded-full
                    flex items-center justify-center 
                    hover:scale-110 transition-transform duration-300
-                   
                    animate-flameBlue"
       >
         {isMuted ? (
