@@ -65,7 +65,7 @@ const eventDetails = [
       "A fast-paced coding face-off where teams of 2 race to spot, identify and fix intentional errors in code snippets across multiple languages.",
     guidelines: [
       "Team Size: 2 players per team",
-      "Format: 3 rounds of debugging challenges in C, C++, Java, Python, and JavaScript",
+      "Format: 3 rounds of debugging challenges in C, C++ and Python",
       {
         title: "Round Structure:",
         subpoints: [
