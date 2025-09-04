@@ -9,7 +9,7 @@ const HeroVideo = () => {
   // Check screen size immediately on mount & when window resizes
   const updateVideoSource = () => {
     const isMobile = window.innerWidth <= 768;
-    setVideoSrc(isMobile ? "/promo-mobile.mp4" : "/promo.mp4");
+    setVideoSrc(isMobile ? "/promo-mobile.mp4" : "/triwizard_logo.mp4");
   };
 
   useLayoutEffect(() => {
