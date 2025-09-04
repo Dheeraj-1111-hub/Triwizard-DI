@@ -164,7 +164,7 @@ const eventDetails = [
       "Equipment: Consoles and controllers provided",
       "Match Format: 8 minutes (4 minutes per half), Kick-Off mode, standard settings",
       "Knockout Rules: Golden goal and penalties if required",
-      "Team Selection: Any official club or national team; no changes after match starts",
+      "Team Selection: Any official club or national team of the men's league; no changes after match starts",
       "Pausing: Only when the ball is out of play; misuse leads to penalty",
       "Fair Play: No glitches, no tampering, no unsporting behaviour",
       "Progression: Single-elimination; winners advance to next stage",
