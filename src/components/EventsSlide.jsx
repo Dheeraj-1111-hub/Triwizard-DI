@@ -17,7 +17,7 @@ const eventsData = [
   {
     id: 2,
     title: "Python Showdown",
-    date: "September 10, 2025",
+    date: "September 11, 2025",
     description:
       "Test your coding speed and smarts in this two-round contest—kick off with a rapid-fire Python quiz, then race to crack coding puzzles under the given time.",
     image: "/eventimages/Python Showdown.jpg",
@@ -71,7 +71,7 @@ const eventsData = [
   {
     id: 9,
     title: "FIFA",
-    date: "September 11, 2025",
+    date: "September 10, 2025",
     description:
       " Participate in our upcoming FIFA Tournament, a competitive showcase of skill, strategy, and sportsmanship. Experience an engaging event that blends fair play with high-stakes excitement on the virtual pitch.",
     image: "/eventimages/2.jpg",
