@@ -44,7 +44,7 @@ const eventsData = [
   {
     id: 5,
     title: "Hunt for Horcrux",
-    date: "September 10, 2025",
+    date: "September 11, 2025",
     description:
       "Teams of 4 are chained together, racing through mini-games while dodging rival teams and a sudden Petrificus Totalus which freezes the teams! Collect Horcruxes, survive setbacks, and cross the finish line fastest to win",
     image: "/eventimages/Hunt.jpg",
